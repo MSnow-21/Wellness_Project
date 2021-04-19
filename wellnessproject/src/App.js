@@ -20,7 +20,7 @@ function App() {
         <Nav />
         <Switch>
           {/* To add more routes, simply follow the syntax within the switch statement.*/}
-            <Route exact path={'/test1'}>
+            <Route exact path={['/', '/test1']}>
               <Test1 />
             </Route>
             <Route exact path='/test2'>
