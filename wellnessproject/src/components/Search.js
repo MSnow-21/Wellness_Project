@@ -9,7 +9,7 @@ class Search extends Component {
 
     componentDidMount() {
         API.getSearchResultsOne()
-        .then(res=> this.setState({ results: res.foodNutrients}))
+        .then(res=> this.setState({ results: res.data.foods }))
         .catch(err=> console.log(err));
 
         console.log(this.state.results);
