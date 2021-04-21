@@ -20,7 +20,7 @@ const LoginPage = ({ handleSubmit, setUserName, setPassWord }) => {
                 <div >
                     <button type='submit' className='btn btn-default auth-btn'>Login</button>
                 </div>
-                <div className='suLink'>
+                <div className='signupLink'>
                     <p>Don't have an account?</p>
                     <Link to='/signup'>
                         Sign Up

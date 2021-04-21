@@ -17,7 +17,7 @@ const SignUpPage = ({ handleSubmit, setPassWord, setUserName }) => {
                 <div>
                     <button type='submit' className='btn btn-default auth-btn'>Submit</button>
                 </div>
-                <div className='suLink'>
+                <div className='lpginLink'>
                     <p>Already have an account?</p>
                     <Link to='/login'>
                         Log In
