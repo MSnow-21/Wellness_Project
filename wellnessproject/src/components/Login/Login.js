@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import './Login.css';
 import PropTypes from 'prop-types'
-
+import LoginPage from '../pages/LoginPage';
+import SignUpPage from '../pages/SignUpPage';
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
         method: 'POST',
@@ -28,21 +29,23 @@ export default function Login({ setToken }) {
     }
 
     return (
-        <div className='login-wrapper'>
-            <form onSubmit={handleSubmit}>    
-                <h2>Log In!</h2>
-                <label>
-                    <p>Username</p>
-                    <input type='text' onChange={e => setUserName(e.target.value)} />
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type='password' onChange={e => setPassWord(e.target.value)} />
-                </label>
-                <div>
-                    <button type='submit'>Submit</button>
-                </div>
-            </form>
+        <div className='login-signup'>
+        <Router>
+        <Switch>
+          <Route exact path={['/', '/login']}>
+          <LoginPage 
+            handleSubmit={handleSubmit} 
+            setUserName={setUserName}
+            setPassWord={setPassWord} />
+          </Route>
+          <Route exact path='/signup'>
+            <SignUpPage 
+            handleSubmit={handleSubmit} 
+            setUserName={setUserName}
+            setPassWord={setPassWord} />
+          </Route>
+        </Switch>
+        </Router>
         </div>
     );
 };
