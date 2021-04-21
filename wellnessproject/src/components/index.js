@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import API from "../utils/API";
 
 const IndexPage = () => {
-    let [responseData, setResponseData ] = React.useState('')
+    const [responseData, setResponseData ] = useState('')
 
     const fetchData = (e) => {
         e.preventDefault()
@@ -11,6 +11,7 @@ const IndexPage = () => {
         .then((response)=> {
             setResponseData(response.data);
             console.log(response)
+            //console.log(response.data[0].foodNutrients)
         })
         .catch((error) => {
             console.log(error)
