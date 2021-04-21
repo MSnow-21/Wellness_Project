@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const SignUpPage = ({ handleSubmit, setPassWord, setUserName }) => {
     return (
         <div className='signup-wrapper'>
-            <form onSubmit={handleSubmit}>    
-                <h2>Sign Up!</h2>
-                <label>
-                    <p>Username:</p>
-                    <input type='text' onChange={e => setUserName(e.target.value)} />
+            <form className='signup' name='signup' method='POST' action='/signup' onSubmit={handleSubmit}>    
+                <h2>Create Account</h2>
+                <label for='email'>
+                    <p>Email Adress:</p>
+                    <input name='email' type='email' className='form-control' id='email-input' placeholder='Email' onChange={e => setUserName(e.target.value)} />
                 </label>
-                <label>
+                <label for='password'>
                     <p>Password:</p>
-                    <input type='password' onChange={e => setPassWord(e.target.value)} />
+                    <input name='password' type='password' className='form-control' id='password-input' placeholder='Password' onChange={e => setPassWord(e.target.value)} />
                 </label>
                 <div>
-                    <button type='submit'>Submit</button>
+                    <button type='submit' className='btn btn-default auth-btn'>Submit</button>
                 </div>
                 <div className='suLink'>
                     <p>Already have an account?</p>
