@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { link } from "react-scroll";
-import logo from "";
+import {Link} from "react-scroll";
+import logo from "../images/logo.png";
 
 function Navbar() {
 
@@ -23,6 +23,7 @@ function Navbar() {
             <Link to = "#" className = "logo">
                 <img src = {logo} alt = ""/>
             </Link>
+            
             <input className = "menu-btn" type= "checkbox" id = "menu-btn"/>
             <label className = "menu-icon" for = "menu-btn">
                 <span className = "nav-icon"></span>

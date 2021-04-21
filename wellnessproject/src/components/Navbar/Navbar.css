@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-around;
+}
