@@ -1,6 +1,10 @@
+//Require dependencies
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+//Requires our routes
+const users = require('./routes/api/users');
 
 const app = express();
 
@@ -11,9 +15,16 @@ app.use(
 );
 app.use(bodyParser.json());
 
-// DB Config ???
+//DB Config ???
 
-// Connect to MongoDB ???
+//Connect to MongoDB ???
+
+//Middleware
+app.use(passport.initialize());
+//Config
+require('./config/passport')(passport);
+//Routes
+app.use('/api/users', users);
 
 const PORT = process.env.PORT || 8080;
 
