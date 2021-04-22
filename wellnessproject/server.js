@@ -1,16 +1,21 @@
 const express = require('express');
-const cors = require('cors');
-const passport = require('passport');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(cors());
+app.use(
+    bodyParser.urlencoded({
+        extended: false
+    })
+);
+app.use(bodyParser.json());
 
-app.use('/login', (req, res) => {
-    res.send({
-        token: 'test123'
-    });
-});
+// DB Config ???
 
-app.listen(8080, () => console.log('API is running on http://localhost:8080/login'))
+// Connect to MongoDB ???
+
+const PORT = process.env.PORT || 8080;
+
+app.listen(8080, () => console.log(`Server is running on port ${PORT}.`));
 

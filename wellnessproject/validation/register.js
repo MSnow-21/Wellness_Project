@@ -1,9 +1,11 @@
+//Require our dependencies
 const Validator = require('validator');
 const isEmpty = require('is-empty');
 
+//Exports out validation funtction with data from user input
 module.export = function validateRegisterInput (data) {
     let errors = {};
-
+    //Turns empty feilds into an empty string for our validator
     data.name = !isEmpty(data.name) ? data.name : "";
     data.email = !isEmpty(data.email) ? data.email : "";
     data.password = !isEmpty(data.password) ? data.password : "";

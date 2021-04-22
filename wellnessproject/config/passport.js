@@ -18,7 +18,7 @@ function(req, email, password, done) {
         const hash = bCrypt.hashSync(password, salt);
         return hash;
     };
-    bd.User.findOne(
+    db.User.findOne(
         {email: email}
         ).then((user) => {
             if(user) {
