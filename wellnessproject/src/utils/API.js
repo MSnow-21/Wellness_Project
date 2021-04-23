@@ -7,12 +7,6 @@ const APIKEY = "?api_key=";
 const query = "&query="
 
 
-// export default {
-//     getSearchResultsOne: function() {
-//         return axios.get(BASEURL+APIKEY);
-//     },
-// };
-
 export default {
     getData: (search) => 
         axios({

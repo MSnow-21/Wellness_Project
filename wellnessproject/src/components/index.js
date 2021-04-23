@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import SearchForm from "./SearchForm";
+import SearchResults from "./SearchResults";
 import API from "../utils/API";
 
 const IndexPage = () => {
     const [search, setSearch] = useState("");
-    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [protein, setProtein] = useState("");
+    const [proamount, setProAmount] = useState("");
+    const [unit, setUnit] = useState("");
     const [error, setError] = useState("");
 
     useEffect(() => {
@@ -20,9 +24,13 @@ const IndexPage = () => {
             if(res.data.status === "error"){
                 throw new Error(res.data.message);
             }
-            setTitle(res.data)
+            setDescription(res.data[0].description)
+            setProtein(res.data[0].foodNutrients[0].name)
+            setProAmount(res.data[0].foodNutrients[0].number)
+            setUnit(res.data[0].foodNutrients[0].unitName)
+    
             console.log(res);
-            console.log(res.data[0].foodNutrients[4])
+            console.log(res.data[0].foodNutrients[4].amount)
         })
         .catch(err=> setError(err));
     }, [search]);
@@ -33,32 +41,18 @@ const IndexPage = () => {
         console.log(event.target.value);
     }
 
-    
-
-
-
-    
-
-    // const fetchData = (e) => {
-    //     e.preventDefault()
-
-    //     API.getData()
-    //     .then((response)=> {
-    //         setResponseData(response.data);
-    //         console.log(response)
-    //         //console.log(response.data[0].foodNutrients)
-    //     })
-    //     .catch((error) => {
-    //         console.log(error)
-    //     })
-
-    // }
 
     return (
         <div>
             <SearchForm
             handleInputChange={handleInputChange}
             results={search}
+            />
+            <SearchResults
+            description={description}
+            protein={protein}
+            proamount={proamount}
+            unit={unit}
             />
         </div>
         
