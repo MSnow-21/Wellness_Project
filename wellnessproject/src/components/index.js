@@ -3,8 +3,8 @@ import SearchForm from "./SearchForm";
 import API from "../utils/API";
 
 const IndexPage = () => {
-    const [responseData, setResponseData ] = useState('')
     const [search, setSearch] = useState("");
+    const [title, setTitle] = useState("");
     const [error, setError] = useState("");
 
     useEffect(() => {
@@ -14,6 +14,13 @@ const IndexPage = () => {
 
         API.getData(search)
         .then((res)=> {
+            if(res.data.length === 0){
+                throw new Error("No results Found.")
+            }
+            if(res.data.status === "error"){
+                throw new Error(res.data.message);
+            }
+            setTitle(res.data)
             console.log(res);
             console.log(res.data[0].foodNutrients[4])
         })
@@ -23,8 +30,10 @@ const IndexPage = () => {
 
     const handleInputChange = event => {
         setSearch(event.target.value);
-        console.log(setSearch);
+        console.log(event.target.value);
     }
+
+    
 
 
 
