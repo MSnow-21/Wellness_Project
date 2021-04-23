@@ -4,6 +4,8 @@ import axios from "axios";
 
 const BASEURL = "https://api.nal.usda.gov/fdc/v1/foods/list";
 const APIKEY = "?api_key=";
+const query = "&query="
+
 
 // export default {
 //     getSearchResultsOne: function() {
@@ -11,18 +13,18 @@ const APIKEY = "?api_key=";
 //     },
 // };
 
-// export default {
-//     getData: () => 
-//         axios({
-//             'method':'GET',
-//             'url': BASEURL+APIKEY,
-//         })
+export default {
+    getData: (search) => 
+        axios({
+            'method':'GET',
+            'url': BASEURL+APIKEY+query+search,
+        })
 
-// }
+}
 
 
 
-//RapidAPI Nutrionix
+// RapidAPI Nutrionix
 
 // export default {
 //     getData: () => 
