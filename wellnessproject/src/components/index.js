@@ -18,6 +18,7 @@ const IndexPage = () => {
 
         API.getData(search)
         .then((res)=> {
+            console.log(res)
             if(res.data.length === 0){
                 throw new Error("No results Found.")
             }
@@ -29,7 +30,7 @@ const IndexPage = () => {
             setProAmount(res.data[0].foodNutrients[0].number)
             setUnit(res.data[0].foodNutrients[0].unitName)
     
-            console.log(res);
+            console.log(res.data);
             console.log(res.data[0].foodNutrients[4].amount)
         })
         .catch(err=> setError(err));
