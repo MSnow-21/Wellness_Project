@@ -1,8 +1,9 @@
-import React, {useState} from "react";
-import {Link} from "react-scroll";
+import React, { useState } from "react";
+import "./Navbar.css"
+import { Link } from "react-scroll";
 import logo from "../images/logo.png";
 
-function Navbar() {
+const Navbar = () => {
 
     const [nav, setnav] = useState (false);
 
@@ -20,25 +21,32 @@ function Navbar() {
 
     return (
         <nav className = {nav ? "nav active" : "nav"}>
-            <Link to = "#" className = "logo">
-                <img src = {logo} alt = ""/>
-            </Link>
-            
-            <input className = "menu-btn" type= "checkbox" id = "menu-btn"/>
-            <label className = "menu-icon" for = "menu-btn">
-                <span className = "nav-icon"></span>
-            </label>
+        
+        <Link to = "#" className = "logo">
+            <img src = {logo} alt = ''/>
+        </Link>
+        
+        <input className = "menu-btn" type = "checkbox" id = "menu-btn"/>
+        <label className = "menu-icon" for = "menu-btn">
+            <span className = "nav-icon"></span>
+        </label>
 
-        <ul className = "menu" >
-            <li><link to = "#"> Home </link></li>
-            <li><link to = "#"> Nutrition </link></li>
-            <li><link to = "#"> Fitness </link></li>
-            <li><link to = "#"> Contact </link></li>
-        </ul>
+    <ul className = "menu" >
+        <li><Link to = "#"> Home </Link></li>
+        <li><Link to = "#"> Nutrition </Link></li>
+        <li><Link to = "#"> Fitness </Link></li>
+        <li><Link to = "#"> My Stats </Link></li>
+        <li><Link to = "#"> Journal </Link></li>
+        <li><Link to = "#"> Contact </Link></li>
+    </ul>
 
-        </nav>
+    </nav>
 
     )
 }
 
 export default Navbar;
+
+
+
+    
