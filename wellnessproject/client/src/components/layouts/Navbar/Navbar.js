@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-//import logo from "";
+import "./Navbar.css"
+import { Link } from "react-scroll";
+import logo from "../images/logo.png";
 
 const Navbar = () => {
 
@@ -19,35 +20,33 @@ const Navbar = () => {
     window.addEventListener ("scroll", changeBackground);
 
     return (
-       <nav>
-           <Link to='/test1'>
-               test1
-           </Link>
-           <Link to='/test2'>
-               test2
-           </Link>
-       </nav> 
+        <nav className = {nav ? "nav active" : "nav"}>
+        
+        <Link to = "#" className = "logo">
+            <img src = {logo} alt = ''/>
+        </Link>
+        
+        <input className = "menu-btn" type = "checkbox" id = "menu-btn"/>
+        <label className = "menu-icon" for = "menu-btn">
+            <span className = "nav-icon"></span>
+        </label>
+
+    <ul className = "menu" >
+        <li><Link to = "#"> Home </Link></li>
+        <li><Link to = "#"> Nutrition </Link></li>
+        <li><Link to = "#"> Fitness </Link></li>
+        <li><Link to = "#"> My Stats </Link></li>
+        <li><Link to = "#"> Journal </Link></li>
+        <li><Link to = "#"> Contact </Link></li>
+    </ul>
+
+    </nav>
+
     )
 }
 
 export default Navbar;
 
-/*
-<nav className = {nav ? "nav active" : "nav"}>
-            <Link to = "/test" className = "logo">
-            test1
-            </Link>
-            <input className = "menu-btn" type= "checkbox" id = "menu-btn"/>
-            <label className = "menu-icon" for = "menu-btn">
-                <span className = "nav-icon"></span>
-            </label>
 
-        <ul className = "menu" >
-            <li><link to = "#"> Home </link></li>
-            <li><link to = "#"> Nutrition </link></li>
-            <li><link to = "#"> Fitness </link></li>
-            <li><link to = "#"> Contact </link></li>
-        </ul>
 
-        </nav>
-    */
+    
