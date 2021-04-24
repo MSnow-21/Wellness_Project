@@ -15,8 +15,8 @@ const IndexPage = () => {
 
         API.getData(search)
         .then((res)=> {
-            console.log(res.data[1].foodNutrients)
-            console.log(res.data)
+            // console.log(res.data[1].foodNutrients)
+            // console.log(res.data)
  
             setItems(res.data)
 
