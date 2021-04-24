@@ -1,15 +1,17 @@
 import React from "react";
 
-function SearchResults(props){
+function SearchResults(props){    
+    console.log(props)
+    const myItems = props.items
+    console.log(myItems)
     return(
-        <ul className="list-group search-results">
-            <li className="list-group-item">
-                <h2>Description: {props.description}</h2>
-            </li>
-            <li>
-                <h2>Unit: {props.protein},  Amount: {props.proamount} Unit: {props.unit}</h2>
-            </li>
-    
+        <ul className="list-group">
+            {props.items.map(item => (
+                <li className="list-group-item" key={item.number}>
+                    {props.name}
+                </li>
+
+            ))}
         </ul>
     );
 }

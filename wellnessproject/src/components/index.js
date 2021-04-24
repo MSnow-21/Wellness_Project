@@ -5,10 +5,7 @@ import API from "../utils/API";
 
 const IndexPage = () => {
     const [search, setSearch] = useState("");
-    const [description, setDescription] = useState("");
-    const [protein, setProtein] = useState("");
-    const [proamount, setProAmount] = useState("");
-    const [unit, setUnit] = useState("");
+    const [items, setItems] = useState([]);
     const [error, setError] = useState("");
 
     useEffect(() => {
@@ -18,23 +15,16 @@ const IndexPage = () => {
 
         API.getData(search)
         .then((res)=> {
-            console.log(res)
-            if(res.data.length === 0){
-                throw new Error("No results Found.")
-            }
-            if(res.data.status === "error"){
-                throw new Error(res.data.message);
-            }
-            setDescription(res.data[0].description)
-            setProtein(res.data[0].foodNutrients[0].name)
-            setProAmount(res.data[0].foodNutrients[0].number)
-            setUnit(res.data[0].foodNutrients[0].unitName)
-    
-            console.log(res.data);
-            console.log(res.data[0].foodNutrients[4].amount)
-        })
+            console.log(res.data[1].foodNutrients)
+            console.log(res.data)
+ 
+            setItems(res.data)
+
+        })       
+
         .catch(err=> setError(err));
     }, [search]);
+
 
 
     const handleInputChange = event => {
@@ -50,10 +40,7 @@ const IndexPage = () => {
             results={search}
             />
             <SearchResults
-            description={description}
-            protein={protein}
-            proamount={proamount}
-            unit={unit}
+            items={items}
             />
         </div>
         
