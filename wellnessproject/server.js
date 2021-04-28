@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 //Requires our routes
-const users = require('./routes/api/users');
+const UserRoutes = require('./src/routes/UserRoutes');
+const FitnessRoutes = require('./src/routes/FitnessRoutes');
 
 const app = express();
 
@@ -21,11 +22,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wellness", { us
 //Middleware
 app.use(passport.initialize());
 //Config
-require('./config/passport')(passport);
+require('./src/config/passport')(passport);
 //Routes
-app.use('/api/users', users);
-
+//require('./src/routes/UserRoutes')(app);
+app.use('/api/users', UserRoutes);
+app.use('/api/fitness', FitnessRoutes)
 const PORT = process.env.PORT || 8080;
 
 app.listen(8080, () => console.log(`Server is running on port ${PORT}.`));
 
+ 

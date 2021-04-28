@@ -1,13 +1,13 @@
 const router = require('express').Router();
-let Fitness = require('../../models/Fitness');
+let Fitness = require('../models/Fitness');
 
-router.route('/').get((req,res) => {
+router.get('/', (req, res) => {
     Fitness.find()
     .then(user => res.json(Fitness))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => {
+router.post('/add', (req, res) => {
     const username = req.body.username;
     const date = Date.parse (req.body.date);
     const workout = req.body.workout;
