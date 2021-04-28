@@ -28,6 +28,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start"
   },
+  "proxy": "http://localhost:3001",
   "author": "",
   "license": "ISC"
 }

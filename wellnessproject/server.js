@@ -27,8 +27,8 @@ require('./src/config/passport')(passport);
 //require('./src/routes/UserRoutes')(app);
 app.use('/api/users', UserRoutes);
 app.use('/api/fitness', FitnessRoutes)
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
-app.listen(8080, () => console.log(`Server is running on port ${PORT}.`));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}.`));
 
  

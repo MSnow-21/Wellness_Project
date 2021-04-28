@@ -1,5 +1,6 @@
 import React from 'react';
-import './style.css'
+import './HomepageStyles.css';
+
 
 
 function Header () {
@@ -8,6 +9,7 @@ function Header () {
             <div className = "header-heading">
                 <h2>LETS GET YOUR</h2>
                 <h1><span>MIND AND BODY</span> TOGETHER</h1>
+                <div href='#' className = 'header-btn'> LOREM IPSON </div>
             </div>
 
 
@@ -15,4 +17,4 @@ function Header () {
     )
 }
 
-export default Header
+export default Header;
