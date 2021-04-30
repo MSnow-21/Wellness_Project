@@ -20,7 +20,19 @@ const IndexPageOne = () => {
         .catch(err=> setError(err));
     },[search]);
 
+    const handleInputChange = event => {
+        setSearch(event.target.value);
+        console.log(event.target.value);
+    }
 
-
-    
+    return(
+        <div>
+            <SearchFormOne
+            handleInputChange={handleInputChange}
+            result={search}
+            />
+        </div>
+    )
 }
+
+export default IndexPageOne;
