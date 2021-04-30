@@ -5,9 +5,9 @@ import Homepage from "./pages/Homepage";
 import Nutrition from "./pages/Nutrition";
 // import Journal from "./pages/Journal";
 import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound"
+import NotFound from "./pages/NotFound";
 import Fitness from "./pages/Fitness";
-
+import Landing from "./pages/Landing";
 
 
 
@@ -20,7 +20,11 @@ function App() {
       <Navbar />
 
       <Switch>
-      <Route exact path = {["/", "home"]}> 
+      <Route exact path = '/'>
+        <Landing />
+      </Route>
+      
+      <Route exact path = "/home"> 
           <Homepage />
       </Route>
 
