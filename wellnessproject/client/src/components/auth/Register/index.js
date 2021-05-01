@@ -34,7 +34,7 @@ const Register = () => {
             password: {password},
             password2: {password2}
         };
-       this.props.registerUser(newUser, this.props.history);
+       registerUser(newUser);
     };
     
 

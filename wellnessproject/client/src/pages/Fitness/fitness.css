@@ -1,0 +1,27 @@
+.fitness-intro {
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    border: black solid 10px;
+    background-color: black;
+}
+
+.add-workout {
+    border: blue solid 10px;
+    margin: auto;
+}
+
+.daily-workouts {
+    border: springgreen solid 10px;
+    margin: auto;
+}
+
+.fitness-tips {
+    border: teal solid 10px;
+    margin: auto;
+}
+
+.fitness-meter {
+    border: tomato solid 10px;
+}
