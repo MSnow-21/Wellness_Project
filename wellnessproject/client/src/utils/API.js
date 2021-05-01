@@ -11,5 +11,16 @@ export default{
         axios({
             'method': 'GET',
             'url': USDA_BASEURL+API_ASK+USDA_API_KEY+query+search,
-        })
-}
+        }),
+
+    getDataTwo: (search) =>
+        axios({
+            'method':'GET',
+            'url':'https://edamam-food-and-grocery-database.p.rapidapi.com/parser',
+            'headers': {
+                'x-rapidapi-key':'',
+                'x-rapidapi-host':'edamam-food-and-grocery-database.p.rapidapi.com'
+            },
+            'params': {'ingr': search},
+        }),
+};
