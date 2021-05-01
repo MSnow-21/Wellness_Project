@@ -3,7 +3,9 @@ import React from "react";
 
 const Fitness = () => {
     return (
-        <h1>Fitness Page</h1>
+        <div>
+            <h1>Fitness</h1>
+        </div>
     ) 
 
 }

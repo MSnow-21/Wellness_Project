@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../../../actions/authActions";
+import classnames from "classnames";
 
 const Login = () => {
 
@@ -10,6 +14,18 @@ const Login = () => {
     const handleEmailChange = event => setEmail(event.target.value);
     const handlePasswordChange = event => setPassword(event.target.value);
 
+    const componentWillReceiveProps = (nextProps) => {
+        if (nextProps.auth.isAuthenticated) {
+          this.props.history.push("/dashboard");
+        }
+
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+    }
+
     const handleSubmit = event => {
         event.preventDefault();
 
@@ -17,7 +33,7 @@ const Login = () => {
             email: {email},
             password: {password}
         };
-        console.log(userData);
+        loginUser(userData);
     };
 
     return(
@@ -30,7 +46,14 @@ const Login = () => {
                     type='email'
                     placeholder='Email'
                     onChange={handleEmailChange}
+                    className={classnames("", {
+                        invalid: errors.email || errors.emailnotfound
+                      })}
                     />
+                    <span>
+                        {errors.email}
+                        {errors.emailnotfound}
+                    </span>
                 </div>
                 <div>
                     <input
@@ -38,7 +61,14 @@ const Login = () => {
                     type='password'
                     placeholder='Password'
                     onChange={handlePasswordChange}
+                    className={classnames("", {
+                        invalid: errors.password || errors.passwordincorrect
+                      })}
                     />
+                    <span>
+                        {errors.email}
+                        {errors.emailnotfound}
+                    </span>
                 </div>
                 <div>
                     <button
@@ -58,4 +88,18 @@ const Login = () => {
     )
 }
 
-export default Login;
+Login.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+
+export default connect(
+    mapStateToProps,
+    { loginUser }
+) (Login);

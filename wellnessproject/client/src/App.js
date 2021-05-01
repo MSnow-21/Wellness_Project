@@ -9,12 +9,13 @@ import NotFound from "./pages/NotFound";
 import Fitness from "./pages/Fitness";
 import Landing from "./pages/Landing";
 
-
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
+    <Provider store={store}>
     <div className = "App">
-
     <Router>
 
       <Navbar />
@@ -56,6 +57,7 @@ function App() {
       
 
     </div>
+    </Provider>
   );
   
   }

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
+import { registerUser } from "../../../actions/authActions";
+import classnames from "classnames";
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -13,6 +17,14 @@ const Register = () => {
     const handlePasswordChange = event => setPassword(event.target.value);
     const handlePassword2Change = event => setPassword2(event.target.value);
 
+    const componentWillReceiveProps = (nextProps) => {
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+
     const handleSubmit = event => {
         event.preventDefault();
 
@@ -22,7 +34,7 @@ const Register = () => {
             password: {password},
             password2: {password2}
         };
-        console.log(newUser);
+       this.props.registerUser(newUser, this.props.history);
     };
     
 
@@ -37,7 +49,11 @@ const Register = () => {
                     type='text'
                     placeholder='Name'
                     onChange={handleNameChange}
+                    className={classnames('', {
+                        invalid: errors.name
+                    })}
                     />
+                    <span>{errors.name}</span>
                 </div>
                 <div>
                     <input
@@ -45,7 +61,11 @@ const Register = () => {
                     type='email'
                     placeholder='Email' 
                     onChange={handleEmailChange}
+                    className={classnames('', {
+                        invalid: errors.email
+                    })}
                     />
+                    <span>{errors.email}</span>
                 </div>
                 <div>
                     <input
@@ -53,7 +73,11 @@ const Register = () => {
                     type='password'
                     placeholder='Password'
                     onChange={handlePasswordChange}
+                    className={classnames('', {
+                    invalid: errors.password
+                    })}
                     />
+                    <span>{errors.password}</span>
                 </div>
                 <div>
                     <input
@@ -61,7 +85,11 @@ const Register = () => {
                     type='password'
                     placeholder='Confirm Password'
                     onChange={handlePassword2Change}
+                    className={classnames('', {
+                    invalid: errors.password2
+                    })}
                     />
+                    <span>{errors.password2}</span>
                 </div>
                 <div>
                     <button 
@@ -81,4 +109,18 @@ const Register = () => {
     )
 }
 
-export default Register;
+Register.propTypes = {
+    registerUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+
+export default connect(
+    mapStateToProps,
+    { registerUser }
+) (withRouter(Register));
