@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
 import SearchFormOne from "../SearchFormOne/index";
 import API from "../../utils/API";
-import SearchResultsOne from "../SearchResultsOne";
+import SearchResultsOne from "../SearchResultsOne/index";
 
 const IndexPageOne = () => {
     const [search, setSearch] = useState("");
