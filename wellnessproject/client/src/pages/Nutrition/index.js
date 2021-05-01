@@ -1,6 +1,6 @@
 import React from "react";
-import IndexPageOne from "../../components/SearchOneIndex";
-import IndexPageTwo from "../../components/SearchTwoIndex";
+import IndexPageOne from "../../components/SearchIndexOne";
+import IndexPageTwo from "../../components/SearchIndexTwo";
 
 
 const Nutrition = () => {
