@@ -1,7 +1,7 @@
 import React from "react";
 import IndexPageOne from "../../components/SearchIndexOne";
 import IndexPageTwo from "../../components/SearchIndexTwo";
-
+import IndexPageThree from "../../components/SearchIndexThree";
 
 const Nutrition = () => {
     return (
@@ -11,6 +11,7 @@ const Nutrition = () => {
 
             <IndexPageOne/>
             <IndexPageTwo/>
+            <IndexPageThree/>
     
         </div>
     );

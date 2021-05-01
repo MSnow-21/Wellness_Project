@@ -23,4 +23,16 @@ export default{
             },
             'params': {'ingr': search},
         }),
+
+    getDataThree: (search) =>
+        axios({
+            'method':'GET',
+            'url': 'https://nutritionix-api.p.rapidapi.com/v1_1/search/'+search,
+            'headers': {
+            'x-rapidapi-key':'',
+            'x-rapidapi-host':'nutritionix-api.p.rapidapi.com'
+            },
+            'params': {'fields': 'item_name,item_id,brand_name,nf_calories,nf_total_fat'},
+        })
+
 };
