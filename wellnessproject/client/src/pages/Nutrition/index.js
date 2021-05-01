@@ -1,9 +1,16 @@
 import React from "react";
+import "./style.css"
 
 
 const Nutrition = () => {
     return (
-        <h1>Nutrition Page</h1>
+        <div id = "main">
+
+            <h1>Nutrition Page</h1>
+
+
+        </div>
+    
     ) 
 
 }

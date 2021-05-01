@@ -7,3 +7,5 @@ const EntryHeader = () => {
 const EntryBody = props => {
     
 }
+
+export default Entries;
