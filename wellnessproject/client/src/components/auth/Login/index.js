@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../../actions/authActions";
 import classnames from "classnames";
+import './login.css';
 
 const Login = () => {
 
@@ -37,7 +38,7 @@ const Login = () => {
     };
 
     return(
-        <div className='login-form'>
+        <div className='col-md-3 login-form'>
             <form>
                 <h2>Login</h2>
                 <div>

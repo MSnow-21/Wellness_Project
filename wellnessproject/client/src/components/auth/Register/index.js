@@ -1,11 +1,14 @@
+//!!!! !!!! !!!! !!!! !!!!
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, useHistory } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { registerUser } from "../../../actions/authActions";
 import classnames from "classnames";
+import './register.css';
 
 const Register = () => {
+    let history = useHistory();
     const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -30,6 +33,7 @@ const Register = () => {
        console.log(newUser);
        dispatch(registerUser(newUser))
         .then(() => {
+            history.push('/login')
             console.log("worked")
           //setSuccessful(true);
         })
@@ -41,7 +45,7 @@ const Register = () => {
     
 
     return (
-        <div className='register-form'>
+        <div className='register-form col-md-3'>
             <h2>Sign Up</h2>
             <form>
                 <div>
