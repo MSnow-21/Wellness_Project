@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "workout": "Chest/Tries"
+    },
+    {
+        "id": 2,
+        "muscles": "Back/Bies"
+    },
+    {
+        "id": 3,
+        "muscles": "Full Upper Body"
+    },
+    {
+        "id": 4,
+        "muscles": "Yoga"
+    },
+    {
+        "id": 5,
+        "muscles": "Legs"
+    },
+    {
+        "id": 6,
+        "muscles": "Core"
+    }
+]

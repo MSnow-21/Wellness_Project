@@ -1,9 +1,19 @@
 import React from 'react';
+import WorkoutCards from '../WorkoutCard';
 
-const DailyWorkouts = () => {
+const DailyWorkouts = ({ workouts }) => {
     return (
         <div className='daily-workouts col-md-12'>
-            <p>Workouts go here!</p>
+            <label>Choose a workout!</label>
+            <select className='workout-options'>
+                <option>Chest/Tries</option>
+                <option>Back/Bies</option>
+                <option>Full Upper Body</option>
+                <option>Yoga</option>
+                <option>Legs</option>
+                <option>Core</option>
+            </select>
+            <WorkoutCards />
         </div>
     )
 }

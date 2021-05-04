@@ -1,47 +1,48 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { registerUser } from "../../../actions/authActions";
 import classnames from "classnames";
 
 const Register = () => {
+    const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [password2, setPassword2] = useState('');
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState('');
 
     const handleNameChange = event => setName(event.target.value);
     const handleEmailChange = event => setEmail(event.target.value);
     const handlePasswordChange = event => setPassword(event.target.value);
     const handlePassword2Change = event => setPassword2(event.target.value);
 
-    const componentWillReceiveProps = (nextProps) => {
-        if (nextProps.errors) {
-          this.setState({
-            errors: nextProps.errors
-          });
-        }
-      }
-
     const handleSubmit = event => {
         event.preventDefault();
 
         const newUser = {
-            name: {name},
-            email: {email},
-            password: {password},
-            password2: {password2}
+            name: name,
+            email: email,
+            password: password,
+            password2: password2
         };
-       registerUser(newUser);
+       console.log(newUser);
+       dispatch(registerUser(newUser))
+        .then(() => {
+            console.log("worked")
+          //setSuccessful(true);
+        })
+        .catch(() => {
+            console.log("didnt work")
+          //setSuccessful(false);
+        });
     };
     
 
     return (
         <div className='register-form'>
             <h2>Sign Up</h2>
-            {name}{password}{password2}{email}
             <form>
                 <div>
                     <input 

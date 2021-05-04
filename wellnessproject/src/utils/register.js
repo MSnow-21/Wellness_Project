@@ -23,18 +23,18 @@ module.exports = function validateRegisterInput (data) {
     }
     //Validates password
     if(Validator.isEmpty(data.password)) {
-        errors.name = 'A password is required!';
+        errors.password = 'A password is required!';
     }
     //Validates password confirmation
     if(Validator.isEmpty(data.password2)) {
-        errors.name = 'Must confirm password!';
+        errors.password2 = 'Must confirm password!';
     }
     //Validates password length
-    if(Validator.isLength(data.password, { min: 6, max: 15})) {
+    if(!Validator.isLength(data.password, { min: 6, max: 15})) {
         errors.password = 'Password must have 6 to 15 charecters!';
     }
     //Validates that password and password confirmation match
-    if(Validator.equals(data.password, data.password2)) {
+    if(!Validator.equals(data.password, data.password2)) {
         errors.password2 = 'Passwords do not match!';
     }
     //Will return any errors, if errors are null wil return isValid
