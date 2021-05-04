@@ -39,8 +39,6 @@ function SearchResultsThree(props){
     );
 
 
-
-
 }
 
 export default SearchResultsThree;

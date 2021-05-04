@@ -7,16 +7,17 @@ const USDA_BASEURL = `${process.env.REACT_APP_USDA_BASE_URL}`;
 const API_ASK = "?api_key=";
 const USDA_API_KEY = `${process.env.REACT_APP_USDA_API_KEY}`;
 const query = "&query=";
+const pages = "&pageSize=5";
 
 
 //Rapid API Query REQUIREMENTS
-const RAPID_API_KEY = `${process.env.REACT_APP_RAPID_API_KEY}`
+const RAPID_API_KEY = `${process.env.REACT_APP_RAPID_API_KEY}`;
 
 export default{
     getData: (search) => 
         axios({
             'method': 'GET',
-            'url': USDA_BASEURL+API_ASK+USDA_API_KEY+query+search,
+            'url': USDA_BASEURL+API_ASK+USDA_API_KEY+query+search+pages,
         }),
 
     getDataTwo: (search) =>
@@ -30,7 +31,7 @@ export default{
             'params': {'ingr': search},
         }),
 
-    getDataThree: (search) =>
+        getDataThree: (search) =>
         axios({
             'method':'GET',
             'url': 'https://nutritionix-api.p.rapidapi.com/v1_1/search/'+search,
@@ -39,6 +40,7 @@ export default{
             'x-rapidapi-host':'nutritionix-api.p.rapidapi.com'
             },
             'params': {'fields': 'item_name,item_id,brand_name,nf_calories,nf_total_fat'},
-        })
+        }),
 
+    
 };

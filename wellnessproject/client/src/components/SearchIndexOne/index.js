@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from "react";
-import SearchFormOne from "../SearchFormOne/index";
+import SearchFormOne from "../SearchFormOne/";
 import API from "../../utils/API";
 import SearchResultsOne from "../SearchResultsOne/index";
+import TableBody from "../TableHeadingOne";
 
 const IndexPageOne = () => {
     const [search, setSearch] = useState("");
@@ -23,13 +24,20 @@ const IndexPageOne = () => {
     },[search]);
 
     const handleInputChange = event => {
+        event.preventDefault();
         setSearch(event.target.value);
         console.log(event.target.value);
+    }
+
+    const handleSubmitHandler = (event) => {
+        event.preventDefault()
+        console.log("You are submitting the value")
     }
 
     return(
         <div>
             <SearchFormOne
+            submit={handleSubmitHandler}
             handleInputChange={handleInputChange}
             result={search}
             />

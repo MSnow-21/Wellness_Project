@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SearchFormThree from "../SearchFormThree";
 import SearchResultsThree from "../SearchResultsThree"
-import API from "../../utils/API";
+import APITwo from "../../utils/APITwo";
 
 const IndexPageThree = () => {
     const [ search , setSearch ] = useState("");
@@ -13,7 +13,7 @@ const IndexPageThree = () => {
             return;
         }
 
-        API.getDataThree(search)
+        APITwo.getDataThree(search)
         .then((res) => {
             console.log(res.data);
             console.log(res.data.hits);
