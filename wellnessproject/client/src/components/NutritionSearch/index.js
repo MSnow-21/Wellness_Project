@@ -6,7 +6,7 @@ import "./style.css"
 
 function NutritionSearch(){
     return(
-        <div>
+        <div className="main">
             <div className="row areaone">
                 <div className="col-md-12">
                     <h1>Hello, Possible Todo List Here</h1>
@@ -15,18 +15,11 @@ function NutritionSearch(){
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-6 indexpageone">
-                    <IndexPageOne/>
-                </div>
-                <div className="col-md-1">
-
-                </div>
                 <div className="col-md-3">
                     <IndexPageTwo/>
                 </div>
-            </div>
-            <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-9">
+                    <IndexPageOne/>
                     <IndexPageThree/>
                 </div>
             </div>

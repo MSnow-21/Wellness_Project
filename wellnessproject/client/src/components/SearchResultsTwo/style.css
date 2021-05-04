@@ -1,0 +1,28 @@
+
+
+.carddiv{
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+}
+
+.picturecard{
+    box-shadow: 5px 5px #212529;
+    color: #495057;
+}
+
+.img-card-top{
+    display: block;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+
+}
+
+.card-text{
+    text-align: center;
+}

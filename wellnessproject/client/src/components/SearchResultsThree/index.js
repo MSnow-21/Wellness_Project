@@ -4,7 +4,6 @@ function SearchResultsThree(props){
 
     console.log(props.item)
 
-
     return(
         <div>
             <table className="table">

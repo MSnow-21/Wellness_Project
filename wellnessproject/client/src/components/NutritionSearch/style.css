@@ -1,3 +1,15 @@
+.main{
+    width:100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../images/mae-mu-8Vh6ulKc50o-unsplash.jpg');
+    position: relative;
+    z-index: 0;
+}
+
+
 .areaone{
     border:solid;
 }
