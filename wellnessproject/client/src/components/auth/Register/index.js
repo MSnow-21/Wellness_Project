@@ -30,7 +30,6 @@ const Register = () => {
             password: password,
             password2: password2
         };
-       console.log(newUser);
        dispatch(registerUser(newUser))
         .then(() => {
             history.push('/login')

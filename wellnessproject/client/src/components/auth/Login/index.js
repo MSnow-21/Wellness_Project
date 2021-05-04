@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { loginUser } from "../../../actions/authActions";
 import classnames from "classnames";
 import './login.css';
 
 const Login = () => {
-
+    const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({});
@@ -15,26 +15,20 @@ const Login = () => {
     const handleEmailChange = event => setEmail(event.target.value);
     const handlePasswordChange = event => setPassword(event.target.value);
 
-    const componentWillReceiveProps = (nextProps) => {
-        if (nextProps.auth.isAuthenticated) {
-          this.props.history.push("/dashboard");
-        }
-
-        if (nextProps.errors) {
-          this.setState({
-            errors: nextProps.errors
-          });
-        }
-    }
-
     const handleSubmit = event => {
         event.preventDefault();
 
         const userData = {
-            email: {email},
-            password: {password}
+            email: email,
+            password: password
         };
-        loginUser(userData);
+        dispatch(loginUser(userData))
+        .then(() => {
+            console.log('worked')
+        })
+        .catch(() => {
+            console.log('Broke')
+        })
     };
 
     return(
