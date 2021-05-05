@@ -1,32 +1,41 @@
 import React from "react";
+import "./style.css";
 
 function SearchResultsTwo(props){
     
     console.log(props.items)
+    
+    const getNutrients = (nutrients) => {
+        const nutrientArray = []
+        for (const nutrient in nutrients){
+            nutrientArray.push([nutrient,nutrients[nutrient]])
+        }
+        return nutrientArray;
 
-    return(
-        <div className="card">
-            {props.items.map(({food},i) => (
-                <div key={i} className="cardbody">
-                    <img className="img-card-top" src={food.image} alt="food image"></img>
-                    <div className="card-body">
-                        <p className="card-text">{food.category}</p>
-                        <p className="card-text">{food.categoryLabel}</p>
-                        <p className="card-text">{food.label}</p>
-                    </div>
-                    {console.log(food.nutrients)}
+    }
 
-                    {Object.values(food.nutrients).map((nutrient,j) => (
-                        <ul key={j} >{nutrient}</ul>
-                    ))
-
-                  }
+    return(  
+        <div className="card carddiv">
+        {props.items.map(({food},i) => (
+            <div key={i} className="cardbody picturecard">
+                <img className="img-card-top" src={food.image} alt="food image"></img>
+                <div className="card-body">
+                    <p className="card-text">{food.label}</p>
                 </div>
+      
 
-            ))}
-  
-        </div>
+                
+                {getNutrients(food.nutrients).map((nutrient,j) => (
+                    <ul key={j}>
+                        <li className="listtext">{nutrient[0]+nutrient[1]}</li>
+                    </ul>
+                ))
 
+              }
+            </div>
+        ))}  
+    </div>
+        
     );
 }
 

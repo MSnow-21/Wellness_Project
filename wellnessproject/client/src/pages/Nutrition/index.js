@@ -1,18 +1,13 @@
 import React from "react";
-import IndexPageOne from "../../components/SearchIndexOne";
-import IndexPageTwo from "../../components/SearchIndexTwo";
-import IndexPageThree from "../../components/SearchIndexThree";
+import NutritionSearch from "../../components/NutritionSearch";
+
+
 
 const Nutrition = () => {
     return (
         <div>
-            <h1>Nutrition Page</h1>
-            <h2>Hello</h2>
+            <NutritionSearch/>
 
-            <IndexPageOne/>
-            <IndexPageTwo/>
-            <IndexPageThree/>
-    
         </div>
     );
 
