@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Form from "../../components/Form/Form";
 import Entries from "../../components/Entries/Entries"
+import "./JournalStyle.css"
+
+// Will be turning that CLASS into a FUNCTION after working
 
 
 //function Header () {
@@ -20,14 +23,14 @@ removeEntry = index => {
     const { entries } = this.state
     
     this.setState ({
-        entries: entries.filter (( entry, i) => {
-            return i != index
+        entries: entries.filter ((entry, i) => {
+            return i !== index
         })
     })
 }
 
 handleSubmit = entry => {
-    this.setState ({ entries: [...this.state.entires, entry]})
+    this.setState ({ entries: [...this.state.entries, entry]})
 }
 
 render () {

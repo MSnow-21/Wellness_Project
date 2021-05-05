@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css"
 
 class Form extends Component {
     constructor (props) {
@@ -51,7 +52,7 @@ class Form extends Component {
                         id = "body" />
 
                 </form>
-                <button onClick = {this.submitForm}>Submit</button>
+                <button className = "submitbtn" onClick = {this.submitForm}>Submit</button>
             </div>
         )
     }
