@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage";
 import Nutrition from "./pages/Nutrition";
-// import Journal from "./pages/Journal";
+import Journal from "./pages/Journal";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Fitness from "./pages/Fitness";
@@ -45,11 +45,13 @@ function App() {
         </Route>
         <Route exact path = "/fitness"> 
           <Fitness />
-        </Route> 
-        {/* <Route exact path = "/journal"> 
+      </Route> 
+
+      <Route exact path = "/journal"> 
           <Journal />
-        </Route> */}
-        <Route exact path = "/contact"> 
+      </Route> 
+
+      <Route exact path = "/contact"> 
           <Contact />
         </Route>
         <Route exact path = "/notfound"> 
