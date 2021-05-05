@@ -8,12 +8,11 @@ const Landing = () => {
     return (
         <div className='landing-page'>
             <div className='intro row'>
-                <h1 className='col-md-3'>Name Of Our Project</h1>
+                <h1 className='col-md-3 app-title'>Well Rouded Fitness</h1>
                 <div className='col-md-5'></div>
                 <p className='col-md-3 statement'>
-                    *Name of App* is an application designed to look at all aspects 
-                    of an indeviduals life, and evaluate how they contribute to a person 
-                    overall health.
+                    Well rounded fitness is an application designed to help an indevidual improve their overall health based on 
+                    all aspects of wellness. Login to start improving your well being.
                 </p>
             </div>
                 <Router>

@@ -10,18 +10,18 @@ const Fitness = () => {
     const [workout, setWorkout] = useState(workouts);
     console.log(workout.id);
     return (
-            <div className='fitness-page'>
-                <Intro />
-            <div className='row'>
-                <div className='col-md-6'>
-                    <AddWorkout />
+        <div className='fitness-page'>
+            <Intro />
+            <div className='row fitness-components'>
+                <div className='col-md-1'></div>
+                <div className='col-md-5'>
+                    <DailyWorkouts
+                    workouts={workout} />
                 </div>
-                <div className='col-md-6'>
-                    <div className='row'>
-                        <DailyWorkouts
-                        workouts={workout} />
-                    </div>
-                    <div className='row'>
+                <div className='col-md-5'>
+                    <AddWorkout />
+                    <div className='row fitness-featurs'>
+                        <div className='col-md-1'></div>
                         <FitnessTip />
                         <FitnessMeter />
                     </div>

@@ -1,27 +1,43 @@
+.fitness-page {
+    background-image: url(../../images/fitness.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+}
+.fitness-components {
+    margin: auto;
+}
 .fitness-intro {
     color: white;
     text-align: center;
-    margin: auto;
     padding-top: 100px;
-    border: black solid 10px;
-    background-color: black;
 }
 
 .add-workout {
-    border: blue solid 10px;
-    margin: auto;
+    border: white solid 2px;
+    background-color: rgba(224, 255, 221, 0.85);
+    border-radius: 15px;
+    filter: drop-shadow(10px 10px 10px black);
 }
 
 .daily-workouts {
-    border: springgreen solid 10px;
-    margin: auto;
+    border: white solid 2px;
+    background-color: rgba(224, 255, 221, 0.85);
+    border-radius: 15px;
+    filter: drop-shadow(10px 10px 10px black);
 }
 
 .fitness-tips {
-    border: teal solid 10px;
-    margin: auto;
+    border: white solid 2px;
+    background-color: rgba(224, 255, 221, 0.85);
+    border-radius: 15px;
+    filter: drop-shadow(10px 10px 10px black);
 }
 
 .fitness-meter {
-    border: tomato solid 10px;
+    border: white solid 2px;
+    background-color: rgba(224, 255, 221, 0.85);
+    border-radius: 15px;
+    filter: drop-shadow(10px 10px 10px black);
 }

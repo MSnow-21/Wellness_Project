@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect, useDispatch } from "react-redux";
 import { loginUser } from "../../../actions/authActions";
@@ -7,6 +7,7 @@ import classnames from "classnames";
 import './login.css';
 
 const Login = () => {
+
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,7 +25,9 @@ const Login = () => {
         };
         dispatch(loginUser(userData))
         .then(() => {
-            console.log('worked')
+
+            console.log('worked');
+            
         })
         .catch(() => {
             console.log('Broke')

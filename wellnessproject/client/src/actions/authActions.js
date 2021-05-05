@@ -7,6 +7,7 @@ import {
   SET_CURRENT_USER,
   USER_LOADING
 } from "./types";
+import { Route } from "react-router";
 
 // Register User
 export const registerUser = (userData) => async dispatch => {
@@ -41,6 +42,7 @@ export const loginUser = (userData) => async dispatch => {
       const decoded = jwt_decode(token);
       // Set current user
       dispatch(setCurrentUser(decoded));
+      <Route to='/fitness'></Route>
     })
     .catch(err =>
       dispatch({
