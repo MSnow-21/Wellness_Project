@@ -1,8 +1,10 @@
 import React from "react";
+import { Spring } from "react-spring";
 
 function TableHeadingOne(){
     return (
-        <thead className="thead-dark">
+    
+    <thead className="thead-dark">
             <tr>
                 <th>#</th>
                 <th scope="col" data-column="one">Brand</th>
@@ -18,6 +20,7 @@ function TableHeadingOne(){
                 <th scope="col" data-column="six">Vitamin C</th>
             </tr>
         </thead>
+
     );
 
 }

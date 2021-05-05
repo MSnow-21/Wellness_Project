@@ -3,8 +3,8 @@ import "./style.css"
 
 function SearchFormTwo(props){
     return(
-        <form className="search">
-            <div className="form-group">
+        <form className="search searchtwo">
+            <div className="form-group searchformtwo">
                 <label htmlFor="language">Edaman Food and Grocery Database</label>
                 <input
                  value={props.search}

@@ -4,6 +4,15 @@ import "./style.css";
 function SearchResultsTwo(props){
     
     console.log(props.items)
+    
+    const getNutrients = (nutrients) => {
+        const nutrientArray = []
+        for (const nutrient in nutrients){
+            nutrientArray.push([nutrient,nutrients[nutrient]])
+        }
+        return nutrientArray;
+
+    }
 
     return(  
         <div className="card carddiv">
@@ -13,9 +22,12 @@ function SearchResultsTwo(props){
                 <div className="card-body">
                     <p className="card-text">{food.label}</p>
                 </div>
-                {Object.values(food.nutrients).map((nutrient,j) => (
+      
+
+                
+                {getNutrients(food.nutrients).map((nutrient,j) => (
                     <ul key={j}>
-                        <li className="listtext">{nutrient}</li>
+                        <li className="listtext">{nutrient[0]+nutrient[1]}</li>
                     </ul>
                 ))
 

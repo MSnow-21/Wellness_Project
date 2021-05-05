@@ -12,10 +12,18 @@ const IndexPageOne = () => {
     useEffect(() => {
         if(!search){
             return;
+        } else if (items === []) {
+            return;
         }
 
         API.getData(search)
         .then((res)=>{
+            if (res.data.length === 0){
+                throw new Error ("No results found");
+            }
+            if(res.data.status === "error"){
+                throw new Error(res.data.message);
+            }
             console.log(res)
             console.log(res.data)
             setItems(res.data)
@@ -29,15 +37,10 @@ const IndexPageOne = () => {
         console.log(event.target.value);
     }
 
-    const handleSubmitHandler = (event) => {
-        event.preventDefault()
-        console.log("You are submitting the value")
-    }
 
     return(
         <div>
             <SearchFormOne
-            submit={handleSubmitHandler}
             handleInputChange={handleInputChange}
             result={search}
             />

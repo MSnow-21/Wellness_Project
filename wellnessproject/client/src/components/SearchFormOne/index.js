@@ -1,9 +1,12 @@
 import React from "react";
+import "./style.css";
+
+
 
 function SearchFormOne(props){
     console.log(props)
     return(
-          <form className="search">
+          <form className="search searchformone">
             <div className="form-group">
                 <label htmlFor="language">USDA Search for Food Nutrients</label>
                 <input

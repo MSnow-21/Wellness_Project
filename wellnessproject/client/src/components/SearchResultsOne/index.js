@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import TableHeadingOne from "../TableHeadingOne";
 
 
-function SearchResultsOne(props){    
+function SearchResultsOne(props){  
+    console.log(props.items)
     const [numberArray, setnumberArray] = useState(["203", "204","205","208","269","307","401"])
+
 
     return(
         <div>
             <table className="table">
                 <TableHeadingOne/>
-                {props.items.map(({ brandOwner,dataType, description, fdcId ,foodNutrients}, i) => (
+            
+                {Array.isArray(props.items) && props.items.map(({ brandOwner,dataType, description, fdcId ,foodNutrients}, i) => (
                 <tbody>
                     <tr key={i}>
                         <th scope="row">#</th>
