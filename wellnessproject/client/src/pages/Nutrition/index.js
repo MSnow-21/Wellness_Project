@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import IndexPageOne from "../../components/SearchIndexOne";
 import IndexPageTwo from "../../components/SearchIndexTwo";
 import IndexPageThree from "../../components/SearchIndexThree";
@@ -16,21 +15,6 @@ const Nutrition = () => {
     
         </div>
     );
-=======
-import "./style.css"
-
-
-const Nutrition = () => {
-    return (
-        <div id = "main">
-
-            <h1>Nutrition Page</h1>
-
-
-        </div>
-    
-    ) 
->>>>>>> c9fcfba1380c35dfd19ad1d4d3b227b6de51de53
 
 }
 
