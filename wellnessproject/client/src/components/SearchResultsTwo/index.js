@@ -17,17 +17,17 @@ function SearchResultsTwo(props){
     return(  
         <div className="card carddiv">
         {props.items.map(({food},i) => (
-            <div key={i} className="cardbody picturecard">
+            <div key={i} className="cardbody picturecard alert alert-light">
                 <img className="img-card-top" src={food.image} alt="food image"></img>
                 <div className="card-body">
-                    <p className="card-text">{food.label}</p>
+                    <p className="card-text foodtext alert alert-dark">{food.label}</p>
                 </div>
       
 
                 
                 {getNutrients(food.nutrients).map((nutrient,j) => (
                     <ul key={j}>
-                        <li className="listtext">{nutrient[0]+nutrient[1]}</li>
+                        <li className="listtext alert alert-success">{nutrient[0]+" "+nutrient[1]}</li>
                     </ul>
                 ))
 

@@ -2,16 +2,15 @@ import React from "react";
 import IndexPageOne from "../SearchIndexOne";
 import IndexPageTwo from "../SearchIndexTwo";
 import IndexPageThree from "../SearchIndexThree";
+import NutritionStart from "../NutritionStart";
 import "./style.css"
 
-function NutritionSearch(){
+function NutritionBegin(){
     return(
         <div className="main">
             <div className="row areaone">
                 <div className="col-md-12">
-                    <h1>Hello, Possible Todo List Here</h1>
-                    <p>Todo example: Add 20G's of protein to daily meal plan</p>
-                    <p>Lower carb intake</p>
+                    <NutritionStart/>
                 </div>
             </div>
             <div className="row">
@@ -19,8 +18,8 @@ function NutritionSearch(){
                     <IndexPageTwo/>
                 </div>
                 <div className="col-md-9">
-                    <IndexPageOne/>
                     <IndexPageThree/>
+                    <IndexPageOne/>
                 </div>
             </div>
         </div>
@@ -30,4 +29,4 @@ function NutritionSearch(){
     )
 }
 
-export default NutritionSearch;
+export default NutritionBegin;

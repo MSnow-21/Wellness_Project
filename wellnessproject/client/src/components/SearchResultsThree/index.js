@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 function SearchResultsThree(props){
 
@@ -7,7 +8,7 @@ function SearchResultsThree(props){
     return(
         <div>
             <table className="table">
-                <thead className="thead-light">
+                <thead className="thead-dark">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col" data-column="one">Brand Name</th>
@@ -21,13 +22,13 @@ function SearchResultsThree(props){
                 <tbody>
                     {props.item.map(({fields},i) => (
                     <tr key={i} className="trone">
-                        <th scope="row">1</th>
-                        <td>{fields.brand_name}</td>
-                        <td>{fields.item_name}</td>
-                        <td>{fields.nf_calories}</td>
-                        <td>{fields.nf_serving_size_qty}</td>
-                        <td>{fields.nf_serving_size_unit}</td>
-                        <td>{fields.nf_total_fat}</td>
+                        <th scope="row" className="tablethree">1</th>
+                        <td className="tablethree">{fields.brand_name}</td>
+                        <td className="tablethree">{fields.item_name}</td>
+                        <td className="tablethree">{fields.nf_calories}</td>
+                        <td className="tablethree">{fields.nf_serving_size_qty}</td>
+                        <td className="tablethree">{fields.nf_serving_size_unit}</td>
+                        <td className="tablethree">{fields.nf_total_fat}</td>
                         </tr>
                         ))
                         }

@@ -1,12 +1,17 @@
 .carddiv{
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:0px;
+    margin-bottom:0px;
     margin-left:10px;
+    border-radius:10px;
+
 }
 
 .picturecard{
     border:solid;
     border-width: 0.5px;
+    
+
+    box-shadow: 5px 10px gray;
 }
 
 .img-card-top{
@@ -14,7 +19,7 @@
     margin-top:10px;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 100%;
     border: solid;
     border-width: 1px;
     border-radius: 10px;
@@ -23,4 +28,18 @@
 
 .card-text{
     text-align: center;
+    opacity: 0.9;
 }
+
+.foodtext{
+    font-weight: bold;
+}
+
+.listtext{
+    width: 170px;
+}
+
+.tablethree{
+    background-color: white;
+}
+

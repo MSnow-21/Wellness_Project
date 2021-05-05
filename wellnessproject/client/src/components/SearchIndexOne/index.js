@@ -2,7 +2,6 @@ import React, { useEffect, useState} from "react";
 import SearchFormOne from "../SearchFormOne/";
 import API from "../../utils/API";
 import SearchResultsOne from "../SearchResultsOne/index";
-import TableBody from "../TableHeadingOne";
 
 const IndexPageOne = () => {
     const [search, setSearch] = useState("");
