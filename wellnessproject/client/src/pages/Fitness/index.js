@@ -8,7 +8,7 @@ import FitnessMeter from "../../components/FitnessMeter";
 import workouts from '../../workouts/workouts.json';
 const Fitness = () => {
     const [workout, setWorkout] = useState(workouts);
-    console.log(workout.id);
+    console.log(workouts[0].workout);
     return (
         <div className='fitness-page'>
             <Intro />

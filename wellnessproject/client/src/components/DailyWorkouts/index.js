@@ -15,6 +15,8 @@ const DailyWorkouts = ({ workouts }) => {
             </select>
             <WorkoutCards />
         </div>
+
+
     )
 }
 

@@ -1,26 +1,37 @@
 [
     {
         "id": 1,
-        "workout": "Chest/Tries"
+        "workout": "Chest/Tries",
+        "excersizes": ["Push Ups", "Dumbell Bench Press", "Barbell Bench Press",
+            "Incline Barbell Press", "Decline Barbell Press", "Pully Flies Incline",
+            "Pully Flies Decline", "Rope Pull Down", "Overhead Tricep Extensions",
+            "Dips", "Isolated Tricep Extensions" 
+        ]
     },
     {
         "id": 2,
-        "muscles": "Back/Bies"
+        "muscles": "Back/Bies",
+        "excersizes": ["Dumbell Bicep Curls", "Bent Over Barbell Rows", 
+            "Shoulder Press", "Bent Over Dumbell Rows","Kneeled One Arm Rows", 
+            "Dead Lifts", "Dumbell Hammer Curls", "Rope Cable Curls", 
+            "Concentration Curls", "Single Arm T-Bar" 
+        ]
     },
     {
         "id": 3,
-        "muscles": "Full Upper Body"
+        "muscles": "Full Upper Body",
+        "excersizes": ["Barbell Bench Press", "Bent-Over Barbell Rows",
+        "Chin Ups", "Incline Flye", "Diamond Press-Ups", "Overhead Press", 
+        "Barbell High Pulls", "Lateral Raise", "Seated Overhead Press",
+        "Dumbell Tricep Extension"
+        ]
     },
     {
         "id": 4,
-        "muscles": "Yoga"
-    },
-    {
-        "id": 5,
-        "muscles": "Legs"
-    },
-    {
-        "id": 6,
-        "muscles": "Core"
+        "muscles": "Legs",
+        "excersizes": ["One Leg Incline Press", "Incline Leg Press", "Leg Extension", 
+        "Single Leg Extension", "Leg Curls", "Back Squats", "Front Squats", "Dead Lifts",
+        "Lunges", "Kettle Bell Dead Lifts"
+        ]
     }
 ]
