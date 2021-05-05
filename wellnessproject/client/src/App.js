@@ -5,9 +5,9 @@ import Homepage from "./pages/Homepage";
 import Nutrition from "./pages/Nutrition";
 // import Journal from "./pages/Journal";
 import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound"
+import NotFound from "./pages/NotFound";
 import Fitness from "./pages/Fitness";
-
+import Wellness from "./pages/Wellness";
 
 
 
@@ -42,6 +42,10 @@ function App() {
 
       <Route exact path = "/notfound"> 
           <NotFound />
+      </Route> 
+
+      <Route exact path = "/wellness"> 
+          <Wellness />
       </Route> 
 
       

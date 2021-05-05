@@ -38,6 +38,7 @@ const Navbar = () => {
         <li><Link to = "/stats"> My Stats </Link></li>
         {/* <li><Link to = "/journal"> Journal </Link></li> */}
         <li><Link to = "/contact"> Contact </Link></li>
+        <li><Link to = "/wellness"> Wellness </Link></li>
     </ul>
 
     </nav>

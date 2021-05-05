@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "practice": "Stoicism",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1c%2FMarcus_Aurelius_Louvre_MR561_n02.jpg&f=1&nofb=1",
+      "thinkers": ["Zeno of Citium", "Marcus Aurelius", "Tatian, Justus Lipsius"],
+      "beliefs": ["To the Stoic, virtue is an inherent feature of the world, no less inexorable in relation to humans than are the laws of nature.", "Stoic moral theory is also based on the view that the world, as one great city, is a unity. Humans, as world citizens, have an obligation and loyalty to all things in that city.", "Memento Mori!"]
+    },
+    {
+      "id": 2,
+      "practice": "Buddhism",
+      "image": "null",
+      "thinkers": ["the Buddha", "The 14th Dalai Lama", "Xuanzang"],
+      "beliefs": ["Developed from the teachings of the Buddha (Sanskrit: “Awakened One”), a teacher who lived in northern India between the mid-6th and mid-4th centuries BCE.", "Nirvana (enlightenment) can be reached by shedding the ignorance that perpetuates suffering.", "Life is a stream of becoming, a series of manifestations and extinctions. The concept of the individual ego is a popular delusion; the objects with which people identify themselves—fortune, social position, family, body, and even mind—are not their true selves.", "Existence is painful.", "Karma"]
+    },
+    {
+      "id": 3, 
+      "practice": "Mindfulness",
+      "image": "null",
+      "thinkers": ["null"],
+      "beliefs": ["null"]
+    },
+    {
+      "id": 4,
+      "practice": "Aesthetics",
+      "image": "null",
+      "thinkers": ["null"],
+      "beliefs": ["null"]
+    },
+    {
+      "id": 5,
+      "practice": "Humanism",
+      "image": "null",
+      "thinkers": ["null", "Marcus Tullius Cicero"],
+      "beliefs": ["Early humanists shared in large part a realism that rejected traditional assumptions and aimed instead at the objective analysis of perceived experience."]
+    },
+        {
+      "id": 6,
+      "practice": "null",
+      "image": "null",
+      "thinkers": ["null"],
+      "beliefs": ["null"]
+    },
+        {
+      "id": 7,
+      "practice": "Enlightenment",
+      "image": "null",
+      "thinkers": ["null"],
+      "beliefs": ["null"]
+    },
+    {
+      "id": 8,
+      "practice": "Existentialism",
+      "image": "null",
+      "thinkers": ["null"],
+      "beliefs": ["null"]
+    },
+        {
+      "id": 9,
+      "practice": "Socratic",
+      "image": "null",
+      "thinkers": ["null"],
+      "beliefs": ["null"]
+    }
+    
+  ]
+  
