@@ -3,41 +3,40 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: black;
+    color: white;
 }
 .fitness-components {
     margin: auto;
 }
+
+.workout-options {
+ color: white;
+ border-radius: 15px;
+ background-color: black;
+ text-align: center;
+}
+
 .fitness-intro {
     color: white;
     text-align: center;
     padding-top: 100px;
 }
-
-.add-workout {
-    border: white solid 2px;
-    background-color: rgba(224, 255, 221, 0.85);
-    border-radius: 15px;
-    filter: drop-shadow(10px 10px 10px black);
-}
-
 .daily-workouts {
+    color: white;
     border: white solid 2px;
-    background-color: rgba(224, 255, 221, 0.85);
+    background-color: black;
     border-radius: 15px;
     filter: drop-shadow(10px 10px 10px black);
 }
 
-.fitness-tips {
-    border: white solid 2px;
-    background-color: rgba(224, 255, 221, 0.85);
-    border-radius: 15px;
-    filter: drop-shadow(10px 10px 10px black);
+.center {
+    text-align: center;
 }
 
-.fitness-meter {
-    border: white solid 2px;
-    background-color: rgba(224, 255, 221, 0.85);
-    border-radius: 15px;
-    filter: drop-shadow(10px 10px 10px black);
+.workout-img {
+    width: 50%;
+}
+
+.left {
+    padding: 20px;
 }

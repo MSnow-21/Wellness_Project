@@ -1,19 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WorkoutCards from '../WorkoutCard';
+import workouts from '../../workouts/workouts.json';
+import FitnessImage from '../FitnessImage';
+const DailyWorkouts = () => {
+    const [excersize, setExcersize] = useState([]);
+    const [userInput, setUserInput] = useState('');
+    const [muscles, setMuscles] = useState('');
+    let index = 0;
 
-const DailyWorkouts = ({ workouts }) => {
+    const handleChange = (event) => {
+        let inputValue = event.target.value
+        setUserInput(inputValue)
+        filterWorkout();
+    }
+    const filterWorkout = () => {
+        if (userInput === 'Chest/Tries') {
+            index = 0
+            }
+        if (userInput === 'Back/Bies') {
+            index = 1
+            }
+        if (userInput === 'Full Upper Body') {
+            index = 2
+            }
+        if (userInput === 'Legs') {
+            index = 3
+            }
+        setExcersize(workouts[index].excersizes)
+        setMuscles(workouts[index].muscles)
+        }
     return (
-        <div className='daily-workouts col-md-12'>
-            <label>Choose a workout!</label>
-            <select className='workout-options'>
-                <option>Chest/Tries</option>
-                <option>Back/Bies</option>
-                <option>Full Upper Body</option>
-                <option>Yoga</option>
-                <option>Legs</option>
-                <option>Core</option>
-            </select>
-            <WorkoutCards />
+        <div className='daily-workouts'>
+            
+            <div className='row'>
+                <div className='col-md-6 center'>
+                    <label className='col-md-12'>Choose a workout!</label>
+                    <br />
+                    <select onChange={handleChange} className='workout-options col-md-3'>
+                        <option>Chest/Tries</option>
+                        <option>Back/Bies</option>
+                        <option>Full Upper Body</option>
+                        <option>Legs</option>
+                    </select>
+                    <FitnessImage />
+                </div>
+                <div className='col-md-6'>
+                    <WorkoutCards
+                        muscles = {muscles} 
+                        excersize = {excersize}
+                    />
+                </div>
+            </div>
         </div>
 
 

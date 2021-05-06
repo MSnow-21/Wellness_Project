@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "workout": "Chest/Tries",
+        "muscles": "Chest/Tries",
         "excersizes": ["Push Ups", "Dumbell Bench Press", "Barbell Bench Press",
             "Incline Barbell Press", "Decline Barbell Press", "Pully Flies Incline",
             "Pully Flies Decline", "Rope Pull Down", "Overhead Tricep Extensions",
