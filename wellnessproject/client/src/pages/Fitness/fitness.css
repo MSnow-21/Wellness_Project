@@ -5,8 +5,9 @@
     background-repeat: no-repeat;
     color: white;
 }
-.fitness-components {
-    margin: auto;
+
+.comp-down {
+    padding: 25px;
 }
 
 .workout-options {
@@ -19,24 +20,32 @@
 .fitness-intro {
     color: white;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.intro {
 }
 .daily-workouts {
     color: white;
-    border: white solid 2px;
-    background-color: black;
+    border: black solid 3px;
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    filter: drop-shadow(10px 10px 10px black);
+    filter: drop-shadow(35px 35px 5px black);
+    padding: 60px;
 }
 
 .center {
     text-align: center;
 }
 
-.workout-img {
-    width: 50%;
+.this {
+    list-style: none;
+    font-size: large;
+    line-height: 42px;
 }
 
-.left {
-    padding: 20px;
+.carousel {
+    border: white solid 3px;
+    margin: 30px;
 }

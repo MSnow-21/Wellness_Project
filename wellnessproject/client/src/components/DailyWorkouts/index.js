@@ -34,7 +34,7 @@ const DailyWorkouts = () => {
             
             <div className='row'>
                 <div className='col-md-6 center'>
-                    <label className='col-md-12'>Choose a workout!</label>
+                    <h3 className='col-md-12'>Choose a workout!</h3>
                     <br />
                     <select onChange={handleChange} className='workout-options col-md-3'>
                         <option>Chest/Tries</option>
@@ -42,9 +42,13 @@ const DailyWorkouts = () => {
                         <option>Full Upper Body</option>
                         <option>Legs</option>
                     </select>
-                    <FitnessImage />
+                    <div className='row'>
+                        <div className='col-md-12'>
+                            <FitnessImage />
+                        </div>
+                    </div>
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 center'>
                     <WorkoutCards
                         muscles = {muscles} 
                         excersize = {excersize}
