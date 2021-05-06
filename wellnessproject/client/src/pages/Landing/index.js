@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from '../../components/auth/Login';
-import Register from '../../components/auth/Register';
+import Login from '../../components/Auth/Login';
+import Register from '../../components/Auth/Register';
 import './landing.css'
 
 const Landing = () => {

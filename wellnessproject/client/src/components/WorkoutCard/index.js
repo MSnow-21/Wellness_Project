@@ -9,7 +9,7 @@ const WorkoutCards = ({ muscles, excersize}) => {
     const listOfExcersizes = excersize.map((e) =>
     <div>
         <li key={e} className='this'>
-            {e} <input type='checkbox' className='check-box'></input>
+            {e}
         </li>
     </div>
     );

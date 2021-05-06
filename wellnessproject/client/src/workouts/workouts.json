@@ -2,10 +2,12 @@
     {
         "id": 1,
         "muscles": "Chest/Tries",
-        "excersizes": ["Push Ups", "Dumbell Bench Press", "Barbell Bench Press",
-            "Incline Barbell Press", "Decline Barbell Press", "Pully Flies Incline",
-            "Pully Flies Decline", "Rope Pull Down", "Overhead Tricep Extensions",
-            "Dips", "Isolated Tricep Extensions" 
+        "excersizes": ["Push Ups: X100", "Dumbell Bench Press: 4 sets of 8-12", 
+            "Barbell Bench Press: 4 sets of 8-12", "Incline Barbell Press: 3 sets of 10-15", 
+            "Decline Barbell Press: 3 sets of 10-15", "Pully Flies Incline: 3 sets 10-15",
+            "Pully Flies Decline: 3 sets of 10-15", "Rope Pull Down: 4 sets of 10-15", 
+            "Overhead Tricep Extensions: 4 sets of 10-15", "Dips: 3 sets of as many as possile", 
+            "Isolated Tricep Extensions 3 sets og 10-15 each side" 
         ]
     },
     {
