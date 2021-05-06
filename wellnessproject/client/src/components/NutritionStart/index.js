@@ -1,31 +1,19 @@
 import React from "react";
-import { Spring } from "react-spring";
+import { useSpring, animated } from "react-spring";
 
-function NutritionStart(){
+function NutritionStart() {
+    const styles = useSpring({
+      from: { color: 'white', fontSize: 0, marginTop: -500},
+      to: { color: 'black', fontSize: 36, marginTop:0 },
+    })
+    // ...
+    return (
+        <div>
+            <animated.h2 style={styles}>Nutrition:</animated.h2>
+            <animated.h3 style={styles}>An important Component in your Life</animated.h3>
+        </div>
 
-    return(
-       <Spring
-       from={{ opacity: 0 }}
-       to={{ opacity: 1 }}
-       >
-
-        {props => (
-            <div style={props}>
-                <div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <h1>Hello</h1>
-                </div>
-            
-
-            </div>
-        )}
-        </Spring>
     )
-}
-
+  }
 
 export default NutritionStart;
