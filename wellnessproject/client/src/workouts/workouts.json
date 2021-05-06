@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "muscles": "Chest/Tries",
+        "excersizes": ["Push Ups: X100", "Dumbell Bench Press: 4 sets of 8-12", 
+            "Barbell Bench Press: 4 sets of 8-12", "Incline Barbell Press: 3 sets of 10-15", 
+            "Decline Barbell Press: 3 sets of 10-15", "Pully Flies Incline: 3 sets 10-15",
+            "Pully Flies Decline: 3 sets of 10-15", "Rope Pull Down: 4 sets of 10-15", 
+            "Overhead Tricep Extensions: 4 sets of 10-15", "Dips: 3 sets of as many as possile", 
+            "Isolated Tricep Extensions 3 sets og 10-15 each side" 
+        ]
+    },
+    {
+        "id": 2,
+        "muscles": "Back/Bies",
+        "excersizes": ["Dumbell Bicep Curls", "Bent Over Barbell Rows", 
+            "Shoulder Press", "Bent Over Dumbell Rows","Kneeled One Arm Rows", 
+            "Dead Lifts", "Dumbell Hammer Curls", "Rope Cable Curls", 
+            "Concentration Curls", "Single Arm T-Bar" 
+        ]
+    },
+    {
+        "id": 3,
+        "muscles": "Full Upper Body",
+        "excersizes": ["Barbell Bench Press", "Bent-Over Barbell Rows",
+        "Chin Ups", "Incline Flye", "Diamond Press-Ups", "Overhead Press", 
+        "Barbell High Pulls", "Lateral Raise", "Seated Overhead Press",
+        "Dumbell Tricep Extension"
+        ]
+    },
+    {
+        "id": 4,
+        "muscles": "Legs",
+        "excersizes": ["One Leg Incline Press", "Incline Leg Press", "Leg Extension", 
+        "Single Leg Extension", "Leg Curls", "Back Squats", "Front Squats", "Dead Lifts",
+        "Lunges", "Kettle Bell Dead Lifts"
+        ]
+    }
+]
