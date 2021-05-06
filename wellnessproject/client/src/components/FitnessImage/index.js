@@ -63,10 +63,29 @@ let legsImgs = [
   img30, img31, img32, img33, img34, img35,
   img36, img17, img37, img38
 ];
-const FitnessImage = () => {
-
-  const createCarousel = legsImgs.map((i) => 
-  <Carousel.Item>
+const FitnessImage = ({ carouselImages }) => {
+  const currentArray = [];
+  console.log(carouselImages);
+  switch (carouselImages) {
+    case '0': 
+      return (
+        currentArray = chestTriesImgs
+      )
+    case '1':
+      return (
+        currentArray = backBiesImgs
+      )
+    case '2':
+      return (
+        currentArray = fullUpperBodyImgs
+      )
+    case '3':
+      return (
+        currentArray = legsImgs
+      )
+  }
+  const createCarousel = chestTriesImgs.map((i) => 
+  <Carousel.Item classname='car-item'>
     <img
       className="d-block w-100 carousel-img"
       src={i}

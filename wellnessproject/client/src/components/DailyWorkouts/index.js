@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import WorkoutCards from '../WorkoutCard';
 import workouts from '../../workouts/workouts.json';
 import FitnessImage from '../FitnessImage';
@@ -6,12 +6,19 @@ const DailyWorkouts = () => {
     const [excersize, setExcersize] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [muscles, setMuscles] = useState('');
+    const [carouselImages, setCarouselImages] = useState('');
     let index = 0;
 
-    const handleChange = (event) => {
-        let inputValue = event.target.value
-        setUserInput(inputValue)
+     useEffect(() => {
         filterWorkout();
+    }, [userInput])
+
+    const handleChange = (event) => {
+        console.log(event.target.value)
+        let inputValue = event.target.value
+        console.log(inputValue)
+        setUserInput(inputValue)
+        console.log(userInput)
     }
     const filterWorkout = () => {
         if (userInput === 'Chest/Tries') {
@@ -28,6 +35,7 @@ const DailyWorkouts = () => {
             }
         setExcersize(workouts[index].excersizes)
         setMuscles(workouts[index].muscles)
+        setCarouselImages(index);
         }
     return (
         <div className='daily-workouts'>
@@ -44,7 +52,8 @@ const DailyWorkouts = () => {
                     </select>
                     <div className='row'>
                         <div className='col-md-12'>
-                            <FitnessImage />
+                            <FitnessImage
+                            carouselImages={carouselImages} />
                         </div>
                     </div>
                 </div>

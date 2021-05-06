@@ -49,3 +49,7 @@
     border: white solid 3px;
     margin: 30px;
 }
+
+.carousel-item {
+    color: aqua !important;
+}
