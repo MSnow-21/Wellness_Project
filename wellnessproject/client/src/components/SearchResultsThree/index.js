@@ -8,7 +8,7 @@ function SearchResultsThree(props){
     return(
         <div>
             <table className="table">
-                <thead className="thead-dark">
+                <thead className="thead-dark tableheadingtwo">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col" data-column="one">Brand Name</th>

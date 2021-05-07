@@ -26,9 +26,6 @@ function NutritionBegin(){
                 </div>
             </div>
         </div>
-  
-
-
     )
 }
 

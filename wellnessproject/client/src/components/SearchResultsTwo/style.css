@@ -36,6 +36,7 @@
 }
 
 .listtext{
+    text-align: center;
     width: 165px;
     box-shadow: 5px 10px 10px #959c9e;
 }
@@ -43,4 +44,21 @@
 .tablethree{
     background-color: white;
 }
+
+@media only screen and (max-width: 1068px) {
+    .listtext {
+      width: 115px;
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .listtext {
+      font-size: 12px;
+      width:90px;
+    }
+}
+
+
+
+
 
