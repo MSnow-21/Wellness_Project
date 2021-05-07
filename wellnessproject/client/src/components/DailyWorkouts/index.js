@@ -2,23 +2,20 @@ import React, { useState, useEffect } from 'react';
 import WorkoutCards from '../WorkoutCard';
 import workouts from '../../workouts/workouts.json';
 import FitnessImage from '../FitnessImage';
+import FitPics from '../FitPics';
 const DailyWorkouts = () => {
     const [excersize, setExcersize] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [muscles, setMuscles] = useState('');
-    const [carouselImages, setCarouselImages] = useState('');
+    const [fitnessImage, setFitnessImage] = useState([]);
     let index = 0;
-
      useEffect(() => {
         filterWorkout();
     }, [userInput])
 
     const handleChange = (event) => {
-        console.log(event.target.value)
         let inputValue = event.target.value
-        console.log(inputValue)
         setUserInput(inputValue)
-        console.log(userInput)
     }
     const filterWorkout = () => {
         if (userInput === 'Chest/Tries') {
@@ -35,14 +32,13 @@ const DailyWorkouts = () => {
             }
         setExcersize(workouts[index].excersizes)
         setMuscles(workouts[index].muscles)
-        setCarouselImages(index);
+        setFitnessImage(FitPics[index]);
         }
     return (
         <div className='daily-workouts'>
-            
             <div className='row'>
                 <div className='col-md-6 center'>
-                    <h3 className='col-md-12'>Choose a workout!</h3>
+                    <h3 className='col-md-12 fitness-headers'>Choose a workout!</h3>
                     <br />
                     <select onChange={handleChange} className='workout-options col-md-3'>
                         <option>Chest/Tries</option>
@@ -53,7 +49,8 @@ const DailyWorkouts = () => {
                     <div className='row'>
                         <div className='col-md-12'>
                             <FitnessImage
-                            carouselImages={carouselImages} />
+                            fitnessImage={fitnessImage}
+                            />
                         </div>
                     </div>
                 </div>
