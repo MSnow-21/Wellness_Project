@@ -1,5 +1,4 @@
 import React from 'react';
-import FitPics from '../FitPics';
 
 import Carousel from 'react-bootstrap/Carousel';
 

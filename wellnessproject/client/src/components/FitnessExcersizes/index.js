@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WorkoutCards = ({ muscles, excersize}) => {
+const FitnessExcersizes = ({ muscles, excersize}) => {
 
     const listOfExcersizes = excersize.map((e) =>
     <div>
@@ -25,4 +25,4 @@ const WorkoutCards = ({ muscles, excersize}) => {
     )
 }
 
-export default WorkoutCards;
+export default FitnessExcersizes;
