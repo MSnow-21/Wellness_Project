@@ -7,9 +7,9 @@ import { BsFillEnvelopeFill, BsMap, BsPhone } from "react-icons/bs"
 
 const Contact = () => {
     return (
-        <>
-            <h1>Contact Us</h1>
-            <p> Lorem ipsum</p>
+        <div className = "background">
+            <h1 className = "title">Contact Us</h1>
+            <p className = "sub-title"> Lorem ipsum</p>
 
             <div id = "contact-container">
                 <div className = "contact-info">
@@ -47,12 +47,23 @@ const Contact = () => {
                         </a>
                     </div>
                     </div>
-                <form>
 
+
+                <form>
+                    <div className = "col">
+                        <div className = "form-group">
+                            <label> First Name </label>
+                            <input type = "text" />
+                        </div>
+                        <div className = "form-group">
+                            <label> Last Name </label>
+                            <input type = "text" />
+                        </div>
+                    </div>
                 </form>
             </div>
 
-        </>
+        </div>
 
         
         
