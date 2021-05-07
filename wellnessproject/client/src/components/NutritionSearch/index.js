@@ -10,11 +10,11 @@ function NutritionBegin(){
         <div className="main">
             <div className="row areaone">
                 <div className="col-md-12">
-                    <h1>Hello</h1>
+
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-12">
+                <div className="col-md-12 nutritionheadline">
                 <NutritionStart/>
                 </div>
                 <div className="col-md-3">

@@ -9,9 +9,7 @@
 .picturecard{
     border:solid;
     border-width: 0.5px;
-    
-
-    box-shadow: 5px 10px gray;
+    box-shadow: 5px 10px 10px #959c9e;
 }
 
 .img-card-top{
@@ -23,6 +21,7 @@
     border: solid;
     border-width: 1px;
     border-radius: 10px;
+    box-shadow: 5px 10px 10px #959c9e;
 
 }
 
@@ -33,10 +32,12 @@
 
 .foodtext{
     font-weight: bold;
+    box-shadow: 5px 10px 10px #959c9e;
 }
 
 .listtext{
-    width: 170px;
+    width: 165px;
+    box-shadow: 5px 10px 10px #959c9e;
 }
 
 .tablethree{

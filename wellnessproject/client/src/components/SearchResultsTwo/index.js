@@ -27,7 +27,7 @@ function SearchResultsTwo(props){
                 
                 {getNutrients(food.nutrients).map((nutrient,j) => (
                     <ul key={j}>
-                        <li className="listtext alert alert-success">{nutrient[0]+" "+nutrient[1]}</li>
+                        <li className="listtext alert alert-success">{nutrient[0]+": "+nutrient[1]}</li>
                     </ul>
                 ))
 
