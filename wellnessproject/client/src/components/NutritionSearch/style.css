@@ -9,8 +9,26 @@
     z-index: 0;
 }
 
-
-.areaone{
-    border:solid;
+.nutritionheadline{
+    padding: 5px;
+    text-align: center;
 }
 
+.areaone{
+    padding: 68px;
+    background-color: black;
+    opacity: .2;
+ 
+}
+
+@media only screen and (max-width: 740px) {
+    .nutritionheadline {
+      padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .areaone {
+      padding: 90px;
+    }
+}

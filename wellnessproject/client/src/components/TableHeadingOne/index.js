@@ -1,10 +1,11 @@
 import React from "react";
-import { Spring } from "react-spring";
+import "./style.css"
+
 
 function TableHeadingOne(){
     return (
     
-    <thead className="thead-dark">
+    <thead className="thead-dark tableheadingone">
             <tr>
                 <th>#</th>
                 <th scope="col" data-column="one">Brand</th>

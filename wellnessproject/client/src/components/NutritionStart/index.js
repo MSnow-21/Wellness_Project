@@ -15,7 +15,8 @@ function NutritionStart() {
     return (
         <div>
             <animated.h2 style={styles}>Nutrition:</animated.h2>
-            <animated.h3 style={morestyle}>A Component in your Life</animated.h3>
+            <animated.h3 style={morestyle}>An Important Part of your Life</animated.h3>
+            <animated.h4 style={morestyle}>Search the databases for food component details</animated.h4>
         </div>
 
     )

@@ -9,26 +9,26 @@ function NutritionBegin(){
     return(
         <div className="main">
             <div className="row areaone">
-                <div className="col-md-12">
-                    <h1>Hello</h1>
+                <div className="col-xl-12">
+
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-12">
+                <div className="col-xl-12 nutritionheadline">
                 <NutritionStart/>
                 </div>
-                <div className="col-md-3">
-                    <IndexPageTwo/>
-                </div>
-                <div className="col-md-9">
+                <div className="col-xl-9">
                     <IndexPageThree/>
                     <IndexPageOne/>
                 </div>
+                <div className="col-xl-3">
+                <IndexPageTwo/>
+
+                </div>
+
+   
             </div>
         </div>
-  
-
-
     )
 }
 
