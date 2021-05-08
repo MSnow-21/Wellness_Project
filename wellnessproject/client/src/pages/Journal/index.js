@@ -10,28 +10,12 @@ const Journal = () => {
     const [userInput, setUserInput] = useState()
 
     const onChange = (event) => {
-        setUserInput(event.target.value);
     }
     
-    const onSubmit = (event) => {
-        event.preventDefault();
-        if (userInput === '') {
-            console.log('Must contain note')
-        }
-        if (entries === []) {
-            setEntries(userInput);
-        }
-        else {
-            setEntries(entries + userInput);
-        }
-    }
-
     return (
         <div className='Journal'>
             <NoteContextProvider>
-                <JournalForm
-                    onSubmit={onSubmit}
-                    onChange={onChange} 
+                <JournalForm 
                 />
             <div>
                 <JournalEntry

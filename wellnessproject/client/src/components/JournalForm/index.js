@@ -32,6 +32,13 @@ const JournalForm = () => {
     const [date, setDate] = useState('');
     const [note, setNote] = useState('');
     const classes = useStyles();
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      addNote(date, note);
+      setDate('');
+      setNote('');
+    };
+
     return (
         <div className = 'row'>
             <div className = 'col-md-3'></div>
@@ -41,14 +48,15 @@ const JournalForm = () => {
                   <InputBase
                     onChange = {(e) => {
                       setDate(moment().format('MMM/Do/mma'));
+                      setNote(e.target.value);
                     }}
                     required
-                    value = {date}
                     type = 'text'
                     className = {classes.input}
                     placeholder = "Whats On Your Mind?"
                     inputProps = {{ 'aria-label': 'search google maps' }}
                   />
+            
                   <Divider 
                     className = {classes.divider}  
                     orientation = "vertical" 
@@ -56,6 +64,7 @@ const JournalForm = () => {
                   <IconButton 
                     className = {classes.iconButton} 
                     aria-label = "directions"
+                    onClick={handleSubmit}
                   >
                     <NoteAddIcon />
                   </IconButton>
