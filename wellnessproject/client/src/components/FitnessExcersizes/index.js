@@ -4,7 +4,7 @@ const FitnessExcersizes = ({ muscles, excersize}) => {
 
     const listOfExcersizes = excersize.map((e) =>
     <div>
-        <li key={e} className='this'>
+        <li key={e} className='list-item'>
             {e}
         </li>
     </div>

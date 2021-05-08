@@ -1,52 +1,31 @@
-import React, { Component } from 'react';
-import Form from "../../components/Form/Form";
-import Entries from "../../components/Entries/Entries"
+import React, { useState } from 'react';
+import JournalEntry from '../../components/JournalEntries';
+import JournalForm from '../../components/JournalForm';
 import "./JournalStyle.css"
 
-// Will be turning that CLASS into a FUNCTION after working
-
-
-//function Header () {
-//    return (
-
- //   )
-class Journal extends Component {
-    state = {
-        entries: [
-
-
-        ]
-    }
-
-
-removeEntry = index => {
-    const { entries } = this.state
-    
-    this.setState ({
-        entries: entries.filter ((entry, i) => {
-            return i !== index
-        })
-    })
+const onChange = (event) => {
+    console.log(event.target.value)
 }
 
-handleSubmit = entry => {
-    this.setState ({ entries: [...this.state.entries, entry]})
+const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target.value);
 }
 
-render () {
-    const { entries} = this.state;
+const Journal = () => {
+    const [entries, setEntires] = useState([]);
 
     return (
-        <div className ="Journal">
-            <h1> My Journal </h1>
-            <Entries entryData = {entries} removeEntry = {this.Entry}/>
-            <Form handleSubmit = {this.handleSubmit}/>
-            
+        <div className='Journal'>
+            <JournalForm
+            onSubmit={onSubmit}
+            onChange={onChange} />
+            <div className='row'>
+                <JournalEntry />
+            </div>
         </div>
     );
     
     }
 
-}
-
-export default Journal;
+    export default Journal;
