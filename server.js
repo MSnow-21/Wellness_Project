@@ -3,10 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const path = require('path');
 //Requires our routes
 const UserRoutes = require('./src/routes/UserRoutes');
 const FitnessRoutes = require('./src/routes/FitnessRoutes');
-const cors = require('cors')
+const cors = require('cors');
 
 const app = express();
 
@@ -23,6 +24,13 @@ app.use(
 );
 app.use(bodyParser.json());
 
+if(process.env.NODE_ENV ==="production"){
+    app.use(express.static("build"));
+    app.get("*",(req,res)=> {
+        res.sendFile(path.resolve(__dirname,"build","index.html"));
+    });
+}
+
 //DB Config ???
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wellness", { useNewUrlParser: true })
 .then(console.log('Success'));
@@ -35,6 +43,7 @@ require('./src/config/passport')(passport);
 app.use('/api/users', UserRoutes);
 app.use('/api/fitness', FitnessRoutes)
 const PORT = process.env.PORT || 3001;
+
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}.`));
