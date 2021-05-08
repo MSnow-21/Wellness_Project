@@ -12,14 +12,17 @@
     padding-top: 150px;
 }
 
-.journal-entry {
+.note {
+    text-align: center;
     background-color: teal;
     color: black;
-    opacity: 75%;
+    opacity: 90%;
     margin: 4%;
-    padding: 1%;
     height: 250px;
     filter: drop-shadow(10px 15px 5px black);
 }
 
-
+.date {
+    font-size: 20px;
+    padding: 20px 0px 0 0;
+}
