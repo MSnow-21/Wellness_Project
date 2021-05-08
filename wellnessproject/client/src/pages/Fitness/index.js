@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import './fitness.css';
 import Intro from '../../components/FitnessIntro';
-import WorkoutCards from "../../components/WorkoutCard";
-import DailyWorkouts from "../../components/DailyWorkouts";
+import FitnessWorkouts from "../../components/FitnessWorkouts";
 
 const Fitness = () => {
     return (
@@ -10,8 +9,8 @@ const Fitness = () => {
             <Intro />
             <div className='row fitness-components'>
                 <div className='col-md-1'></div>
-                <div className='col-md-10 comp-down'>
-                    <DailyWorkouts />
+                <div className='col-md-10'>
+                    <FitnessWorkouts />
                 </div>               
             </div>
         </div>

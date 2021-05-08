@@ -3,6 +3,8 @@
     border-radius: 100%;
     padding: 75px;
     background-image: url(../../../images/fire.png);
+    width: 100px;
+    height: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

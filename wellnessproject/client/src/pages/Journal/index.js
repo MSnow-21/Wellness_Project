@@ -1,52 +1,31 @@
-import React, { Component } from 'react';
-import Form from "../../components/Form/Form";
-import Entries from "../../components/Entries/Entries"
-import "./JournalStyle.css"
+import React, { useState, useEffect } from 'react';
+import JournalEntry from '../../components/JournalEntries';
+import JournalForm from '../../components/JournalForm';
+import "./JournalStyle.css";
+import NoteContextProvider from '../../contexts/NoteContext';
 
-// Will be turning that CLASS into a FUNCTION after working
+const Journal = () => {
+    const [date, setDate] = useState();
+    const [entries, setEntries] = useState([]);
+    const [userInput, setUserInput] = useState()
 
-
-//function Header () {
-//    return (
-
- //   )
-class Journal extends Component {
-    state = {
-        entries: [
-
-
-        ]
+    const onChange = (event) => {
     }
-
-
-removeEntry = index => {
-    const { entries } = this.state
     
-    this.setState ({
-        entries: entries.filter ((entry, i) => {
-            return i !== index
-        })
-    })
-}
-
-handleSubmit = entry => {
-    this.setState ({ entries: [...this.state.entries, entry]})
-}
-
-render () {
-    const { entries} = this.state;
-
     return (
-        <div className ="Journal">
-            <h1> My Journal </h1>
-            <Entries entryData = {entries} removeEntry = {this.Entry}/>
-            <Form handleSubmit = {this.handleSubmit}/>
-            
+        <div className='Journal'>
+            <NoteContextProvider>
+                <JournalForm 
+                />
+            <div>
+                <JournalEntry
+                entries = {entries} 
+                />
+            </div>
+            </NoteContextProvider>
         </div>
     );
     
     }
 
-}
-
-export default Journal;
+    export default Journal;

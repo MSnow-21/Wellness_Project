@@ -2,9 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from '../../components/Auth/Login';
 import Register from '../../components/Auth/Register';
-import './landing.css'
+import './landing.css';
 
 const Landing = () => {
+    
     return (
         <div className='landing-page'>
             <div className='intro row'>

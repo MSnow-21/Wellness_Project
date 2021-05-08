@@ -1,4 +1,3 @@
-import React from 'react';
 import img1 from '../../images/workout-img/barbell-bench-press.jpg';
 import img2 from '../../images/workout-img/push-up.png';
 import img3 from '../../images/workout-img/barbell-bench-press.png';
@@ -41,63 +40,30 @@ import img36 from '../../images/workout-img/front-squat.png';
 import img37 from '../../images/workout-img/lunge.png';
 import img38 from '../../images/workout-img/kettle-bell-dead-lift.png';
 
+let ChestTries = [
+    img1, img2, img3, img4, img5, img6, img7, 
+    img8, img9, img10, img11
+    ];
 
-import Carousel from 'react-bootstrap/Carousel';
+let BackBies = [
+    img12, img13, img14, img15, img16, img17, 
+    img18, img19, img20, img21
 
-let chestTriesImgs = [
-  img1, img2, img3, img4, img5, img6,
-  img7, img8, img9, img10, img11
+    ];
+
+let FullUpperBody = [
+    img3, img13, img22, img23, img24, img25,
+    img26, img27, img28, img29
+    ];
+
+let Legs = [
+    img30, img31, img32, img33, img34, img35,
+    img36, img17, img37, img38
+    ];
+
+export default [
+    ChestTries,
+    BackBies,
+    FullUpperBody,
+    Legs
 ];
-
-let backBiesImgs = [
-  img12, img13, img14, img15, img16, img17, 
-  img18, img19, img20, img21
-];
-
- let fullUpperBodyImgs = [
-  img3, img13, img22, img23, img24, img25,
-  img26, img27, img28, img29
-];
-
-let legsImgs = [
-  img30, img31, img32, img33, img34, img35,
-  img36, img17, img37, img38
-];
-const FitnessImage = ({ carouselImages }) => {
-  const currentArray = [];
-  console.log(carouselImages);
-  switch (carouselImages) {
-    case '0': 
-      return (
-        currentArray = chestTriesImgs
-      )
-    case '1':
-      return (
-        currentArray = backBiesImgs
-      )
-    case '2':
-      return (
-        currentArray = fullUpperBodyImgs
-      )
-    case '3':
-      return (
-        currentArray = legsImgs
-      )
-  }
-  const createCarousel = chestTriesImgs.map((i) => 
-  <Carousel.Item classname='car-item'>
-    <img
-      className="d-block w-100 carousel-img"
-      src={i}
-      alt="First slide"
-    />
-  </Carousel.Item>
-  )
-    return (
-<Carousel fade className='carousel'>
-    {createCarousel}
-</Carousel>
-    )
-}
-
-export default FitnessImage;

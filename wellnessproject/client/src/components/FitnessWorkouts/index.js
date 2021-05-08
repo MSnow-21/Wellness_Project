@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import WorkoutCards from '../WorkoutCard';
+import FitnessExcersizes from '../FitnessExcersizes';
 import workouts from '../../workouts/workouts.json';
-import FitnessImage from '../FitnessImage';
+import FitnessCarousel from '../FitnessCarousel';
+import FitnessPictures from '../FitnessPictures';
 const DailyWorkouts = () => {
     const [excersize, setExcersize] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [muscles, setMuscles] = useState('');
-    const [carouselImages, setCarouselImages] = useState('');
+    const [fitnessImage, setFitnessImage] = useState([]);
     let index = 0;
-
      useEffect(() => {
         filterWorkout();
     }, [userInput])
 
     const handleChange = (event) => {
-        console.log(event.target.value)
         let inputValue = event.target.value
-        console.log(inputValue)
         setUserInput(inputValue)
-        console.log(userInput)
     }
     const filterWorkout = () => {
         if (userInput === 'Chest/Tries') {
@@ -35,16 +32,15 @@ const DailyWorkouts = () => {
             }
         setExcersize(workouts[index].excersizes)
         setMuscles(workouts[index].muscles)
-        setCarouselImages(index);
+        setFitnessImage(FitnessPictures[index]);
         }
     return (
         <div className='daily-workouts'>
-            
             <div className='row'>
                 <div className='col-md-6 center'>
-                    <h3 className='col-md-12'>Choose a workout!</h3>
+                    <h3 className='col-md-12 fitness-headers'>Choose a workout!</h3>
                     <br />
-                    <select onChange={handleChange} className='workout-options col-md-3'>
+                    <select onChange={handleChange} className='workout-options col-md-10'>
                         <option>Chest/Tries</option>
                         <option>Back/Bies</option>
                         <option>Full Upper Body</option>
@@ -52,13 +48,14 @@ const DailyWorkouts = () => {
                     </select>
                     <div className='row'>
                         <div className='col-md-12'>
-                            <FitnessImage
-                            carouselImages={carouselImages} />
+                            <FitnessCarousel
+                            fitnessImage={fitnessImage}
+                            />
                         </div>
                     </div>
                 </div>
                 <div className='col-md-6 center'>
-                    <WorkoutCards
+                    <FitnessExcersizes
                         muscles = {muscles} 
                         excersize = {excersize}
                     />

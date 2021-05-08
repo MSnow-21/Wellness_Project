@@ -29,15 +29,12 @@ console.log(token)
 }
 
 function App() {
-  return (
+  return localStorage.jwtToken ? (
     <div className = "App">
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path = '/'>
-          <Landing />
-        </Route>
-        <Route exact path = "/home"> 
+        <Route exact path = {['/','/home']}> 
           <Homepage />
         </Route>
         <Route exact path = "/nutrition"> 
@@ -60,7 +57,13 @@ function App() {
       </Switch>
     </Router>  
     </div>
-  );
+  ) : (
+  <div>
+  <route exact>
+    <Landing />
+  </route>    
+  </div>
+  )
   
   }
 
