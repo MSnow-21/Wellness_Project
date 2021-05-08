@@ -17,13 +17,16 @@ function NutritionBegin(){
                 <div className="col-md-12 nutritionheadline">
                 <NutritionStart/>
                 </div>
-                <div className="col-md-3">
-                    <IndexPageTwo/>
-                </div>
                 <div className="col-md-9">
                     <IndexPageThree/>
                     <IndexPageOne/>
                 </div>
+                <div className="col-md-3">
+                <IndexPageTwo/>
+
+                </div>
+
+   
             </div>
         </div>
     )

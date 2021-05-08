@@ -15,19 +15,17 @@ function SearchResultsTwo(props){
     }
 
     return(  
-        <div className="card carddiv">
+        <div className="carddiv" style={{ width:'20rem'}}>
         {props.items.map(({food},i) => (
-            <div key={i} className="cardbody picturecard alert alert-light">
+            <div key={i} className="card picturecard alert alert-secondary">
                 <img className="img-card-top" src={food.image} alt="food image"></img>
                 <div className="card-body">
-                    <p className="card-text foodtext alert alert-dark">{food.label}</p>
+                    <h5 className="card-title foodtext btn btn-success btn-lg">Selected Food: {food.label}</h5>
                 </div>
-      
-
                 
                 {getNutrients(food.nutrients).map((nutrient,j) => (
-                    <ul key={j}>
-                        <li className="listtext alert alert-success">{nutrient[0]+": "+nutrient[1]}</li>
+                    <ul key={j} className="list-group-flush">
+                        <li className="listtext btn btn-light btn-lg">{nutrient[0]+": "+nutrient[1]}</li>
                     </ul>
                 ))
 
