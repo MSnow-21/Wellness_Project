@@ -49,7 +49,7 @@ const JournalForm = () => {
                 <Paper component = "form" className = {classes.root}>
                   <InputBase
                     onChange = {(e) => {
-                      setDate(moment().format('MMM/Do/mma'));
+                      setDate(moment().format('MMM/Do/h:mm:a'));
                       setNote(e.target.value);
                     }}
                     required

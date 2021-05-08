@@ -40,7 +40,7 @@ const DailyWorkouts = () => {
                 <div className='col-md-6 center'>
                     <h3 className='col-md-12 fitness-headers'>Choose a workout!</h3>
                     <br />
-                    <select onChange={handleChange} className='workout-options col-md-3'>
+                    <select onChange={handleChange} className='workout-options col-md-10'>
                         <option>Chest/Tries</option>
                         <option>Back/Bies</option>
                         <option>Full Upper Body</option>

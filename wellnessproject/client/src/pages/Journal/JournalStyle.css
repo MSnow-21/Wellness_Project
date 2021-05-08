@@ -20,6 +20,7 @@
     margin: 4%;
     height: 250px;
     filter: drop-shadow(10px 15px 5px black);
+    list-style: none;
 }
 
 .date {

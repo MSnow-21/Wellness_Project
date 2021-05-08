@@ -42,7 +42,6 @@ export const loginUser = (userData) => async dispatch => {
       const decoded = jwt_decode(token);
       // Set current user
       dispatch(setCurrentUser(decoded));
-      <Route to='/fitness'></Route>
     })
     .catch(err =>
       dispatch({
