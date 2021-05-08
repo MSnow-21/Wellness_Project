@@ -1,0 +1,33 @@
+.statbody{
+    background-image: url('../../images/photo-1459664018906-085c36f472af.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.col-md-6{
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(241, 241, 238);
+    text-shadow: 2px 2px #161515;
+    position:inherit;
+    display: table ;    
+    margin-left:auto; 
+    margin-right:auto;
+}
+.row{
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(241, 241, 238);
+    position:inherit;
+    width: 200px;    
+    height: 200px; 
+    display: table ;    
+    margin-left:auto; 
+    margin-right:auto;
+}
+.chart{
+    color: ivory;
+}
+.stat{
+    color: ivory;
+}

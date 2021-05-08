@@ -12,6 +12,7 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from './store';
+import Stats from './pages/Stats'
 
 if(localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route exact path = "/fitness"> 
           <Fitness />
+      </Route> 
+      <Route exact path = "/stats"> 
+          <Stats />
       </Route> 
 
       <Route exact path = "/journal"> 

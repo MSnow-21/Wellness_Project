@@ -29,7 +29,7 @@ const Contact = () => {
 
                     <div className = "icon-text">
                     <BsFillEnvelopeFill className = "fa"/>
-                        <span>admin@WRF.com</span>
+                        <span>mailto:admin@WRF.com</span>
                     </div>
 
 
