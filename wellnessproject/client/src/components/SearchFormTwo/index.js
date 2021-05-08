@@ -5,7 +5,7 @@ function SearchFormTwo(props){
     return(
         <form className="search searchtwo">
             <div className="form-group searchformtwo">
-                <label htmlFor="language">Edaman Food and Grocery Database</label>
+                <label htmlFor="language">Edaman Grocery Database</label>
                 <input
                  value={props.search}
                  onChange={props.handleInputChangeTwo}
