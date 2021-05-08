@@ -32,7 +32,7 @@ if(process.env.NODE_ENV ==="production"){
 }
 
 //DB Config ???
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ambervangieson:Zoe041494@cluster0.dwk78.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wellness", { useNewUrlParser: true })
 .then(console.log('Success'));
 //Middleware
 app.use(passport.initialize());
