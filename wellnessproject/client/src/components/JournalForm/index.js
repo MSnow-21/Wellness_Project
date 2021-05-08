@@ -28,13 +28,15 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const JournalForm = () => {
-    const { addNote } = useContext(NoteContext);
+    const { dispatch } = useContext(NoteContext);
     const [date, setDate] = useState('');
     const [note, setNote] = useState('');
     const classes = useStyles();
     const handleSubmit = (event) => {
       event.preventDefault();
-      addNote(date, note);
+      dispatch({type: 'ADD_NOTE', note: {
+        date, note
+      }});
       setDate('');
       setNote('');
     };

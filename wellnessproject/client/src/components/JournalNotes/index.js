@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const JournalNotes = ({ note }) => {
-    const { deleteNote } = useContext(NoteContext);
+    const { dispatch } = useContext(NoteContext);
     const classes = useStyles();
     return (
 
         <li className='note col-md-3'>
             <div className='row'>
-                <IconButton onClick={() => deleteNote(note.id)} className='col-md-1' className={classes.margin} aria-label="delete">
+                <IconButton onClick={() => dispatch({type: 'DELETE_NOTE', id: note.id})} className='col-md-1' className={classes.margin} aria-label="delete">
                     <DeleteIcon fontSize='medium' />
                 </IconButton>
                 <h3 className='date col-md-10'>{note.date}</h3>

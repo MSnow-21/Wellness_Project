@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { NoteContext } from '../../contexts/NoteContext';
 import JournalNotes from '../JournalNotes';
+import MoodBadIcon from '@material-ui/icons/MoodBad';
 
 const JournalEntry = () => {
     const { notes } = useContext(NoteContext)
@@ -16,8 +17,9 @@ const JournalEntry = () => {
             </ul>
         </div>
     ) : (
-    <div className='noNotes'>
-        <h1>You have no current notes.</h1>
+    <div className='no-notes'>
+        <h1 className='no-notes'>You have no current notes.</h1>
+        <MoodBadIcon style={{ fontSize: 300}} />
     </div>
     )
 }

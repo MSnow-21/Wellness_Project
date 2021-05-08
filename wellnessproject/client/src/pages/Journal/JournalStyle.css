@@ -26,3 +26,11 @@
     font-size: 20px;
     padding: 20px 0px 0 0;
 }
+
+.no-notes {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    text-shadow: 5px 5px teal;
+    font-size: 100px;
+}
