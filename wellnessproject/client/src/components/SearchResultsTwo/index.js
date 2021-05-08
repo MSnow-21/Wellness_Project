@@ -25,7 +25,7 @@ function SearchResultsTwo(props){
                 
                 {getNutrients(food.nutrients).map((nutrient,j) => (
                     <ul key={j} className="list-group-flush">
-                        <li className="listtext btn btn-light btn-lg">{nutrient[0]+": "+nutrient[1]}</li>
+                        <li className="listtext btn btn-light btn-lg">{nutrient[0]+": "+nutrient[1].toString().slice(0,5)}</li>
                     </ul>
                 ))
 
