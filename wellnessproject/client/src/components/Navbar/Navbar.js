@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css"
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
         
         <input className = "menu-btn" type = "checkbox" id = "menu-btn"/>
-        <label className = "menu-icon" for = "menu-btn">
+        <label className = "menu-icon" htmlFor = "menu-btn">
             <span className = "nav-icon"></span>
         </label>
 
@@ -35,7 +35,6 @@ const Navbar = () => {
         <li><Link to = "/home"> Home </Link></li>
         <li><Link to = "/nutrition"> Nutrition </Link></li>
         <li><Link to = "/fitness"> Fitness </Link></li>
-        <li><Link to = "/stats"> My Stats </Link></li>
         <li><Link to = "/journal"> Journal </Link></li>
         <li><Link to = "/contact"> Contact </Link></li>
     </ul>
