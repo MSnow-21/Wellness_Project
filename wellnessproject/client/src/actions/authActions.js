@@ -7,12 +7,9 @@ import {
   SET_CURRENT_USER,
   USER_LOADING
 } from "./types";
-import { Route } from "react-router";
 
 // Register User
 export const registerUser = (userData) => async dispatch => {
-  console.log("here")
-  console.log(userData);
   try {
     const res = axios
       .post('http://localhost:3001/api/users/register', userData);
@@ -27,13 +24,10 @@ export const registerUser = (userData) => async dispatch => {
 };
 
 // Login - get user token
-export const loginUser = (userData) => async dispatch => {
-  axios
-    .post('http://localhost:3001/api/users/login', userData)
+export const loginUser = userData => async dispatch => {
+  axios.post('http://localhost:3001/api/users/login', userData)
     .then(res => {
       // Save to localStorage
-
-// Set token to localStorage
       const { token } = res.data;
       localStorage.setItem("jwtToken", token);
       // Set token to Auth header
@@ -41,13 +35,17 @@ export const loginUser = (userData) => async dispatch => {
       // Decode token to get user data
       const decoded = jwt_decode(token);
       // Set current user
-      dispatch(setCurrentUser(decoded));
+      dispatch(setCurrentUser(decoded))
+      .then(window.location.reload())
     })
     .catch(err =>
+      {
+        console.log(err);
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data
       })
+    }
     );
 };
 

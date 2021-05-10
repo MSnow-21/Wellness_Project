@@ -8,15 +8,19 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import moment from 'moment';
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      padding: '2px 4px',
-      display: 'flex',
+      maxWidth: '100%',
+      textAlign: 'center',
+      marginBottom: theme.spacing(1)
+      
     },
-    input: {
-      marginLeft: theme.spacing(1),
-      flex: 1,
+    form: {
+      paddingTop: theme.spacing(20),
+      paddingLeft: theme.spacing(40),
+      paddingRight: theme.spacing(40)
     },
     iconButton: {
       padding: 10,
@@ -42,10 +46,8 @@ const JournalForm = () => {
     };
 
     return (
-        <div className = 'row'>
-            <div className = 'col-md-3'></div>
-            <div className = 'col-md-6 journal-form'>
-              <form>
+            <Box className={classes.root}>
+              <form className={classes.form}>
                 <Paper component = "form" className = {classes.root}>
                   <InputBase
                     onChange = {(e) => {
@@ -72,8 +74,7 @@ const JournalForm = () => {
                   </IconButton>
                 </Paper>
               </form>
-            </div>
-        </div>
+            </Box>
     )
 }
 

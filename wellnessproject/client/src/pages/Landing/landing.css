@@ -6,7 +6,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Girassol', cursive;
 }
 
 .intro {
@@ -20,3 +19,4 @@
 .statement {
     font-size: larger;
 }
+

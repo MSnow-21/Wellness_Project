@@ -6,6 +6,12 @@
     color: white;
     font-family: 'Roboto Mono', monospace;
     padding-bottom: 25px;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.fitness-components {
+    margin: 0px;
 }
 
 .center {

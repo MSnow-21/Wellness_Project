@@ -12,6 +12,7 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from './store';
+import Footer from './components/Footer';
 
 if(localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -25,7 +26,6 @@ if(localStorage.jwtToken) {
     store.dispatch(logoutUser());
     window.location.href = './login';
   }
-console.log(token)
 }
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path = {['/','/home']}> 
+        <Route exact path = {['/']}> 
           <Homepage />
         </Route>
         <Route exact path = "/nutrition"> 
@@ -55,13 +55,16 @@ function App() {
           <NotFound />
         </Route> 
       </Switch>
+      <Footer />
     </Router>  
     </div>
   ) : (
   <div>
-  <route exact>
-    <Landing />
-  </route>    
+    <Router>
+      <Route exact path = '/'>
+        <Landing />
+      </Route>
+    </Router>    
   </div>
   )
   

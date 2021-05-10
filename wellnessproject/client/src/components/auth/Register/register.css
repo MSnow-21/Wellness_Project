@@ -1,13 +1,36 @@
+
 .register-form {
     margin: 50px auto 50px auto;
     border-radius: 100%;
     padding: 50px;
-    width: 100px;
-    height: auto;
-    background-image: url(../../../images/ice.jpg);
+    height: 350px;
+    width: 350px;
+    background-image: url(../../../images/fire.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 90%;
-    filter: drop-shadow(0px 0px 40px rgb(190, 200, 255));
+    filter: drop-shadow(0px 0px 40px rgb(255, 247, 190));
+}
+
+.signup-bttn {
+    margin: 3px;
+    padding: 3px;
+    opacity: 90%;
+    background-color: white;
+    border-radius: 50%;
+    color:black;
+}
+
+.login-link {
+    color: white;    
+}
+
+.login-link-bttn {
+    color: white;
+    font-size: 24px;
+}
+
+.login-link-bttn:hover {
+    color: orangered;
 }
