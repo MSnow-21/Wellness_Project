@@ -32,7 +32,7 @@ const Register = () => {
         };
        dispatch(registerUser(newUser))
         .then(() => {
-            history.push('/login')
+            history.push('/')
             console.log("worked")
           //setSuccessful(true);
         })
@@ -95,19 +95,21 @@ const Register = () => {
                     />
                     <span>{errors.password2}</span>
                 </div>
-                <div>
-                    <button 
-                    className='btn btn-large'
-                    type='submit'
-                    onClick={handleSubmit}
-                    >
-                    Submit
-                    </button>
+                <div className='signup-bttns'>
+                    <div>
+                        <button 
+                        className='btn btn-large'
+                        type='submit'
+                        onClick={handleSubmit}
+                        >
+                        Submit
+                        </button>
+                    </div>
+                    <p>Already have an account?</p>
+                    <Link to='/'>
+                        Login
+                    </Link>
                 </div>
-                <p>Already have an account?</p>
-                <Link to='/login'>
-                    Login
-                </Link>
             </form>
         </div>
     )

@@ -7,10 +7,6 @@ import NoteContextProvider from '../../contexts/NoteContext';
 const Journal = () => {
     const [date, setDate] = useState();
     const [entries, setEntries] = useState([]);
-    const [userInput, setUserInput] = useState()
-
-    const onChange = (event) => {
-    }
     
     return (
         <div className='Journal'>

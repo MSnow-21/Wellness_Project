@@ -7,31 +7,22 @@ import classnames from "classnames";
 import './login.css';
 
 const Login = () => {
-
+    
     const dispatch = useDispatch();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    let email;
+    let password;
     const [errors, setErrors] = useState({});
 
-    const handleEmailChange = event => setEmail(event.target.value);
-    const handlePasswordChange = event => setPassword(event.target.value);
+    const handleEmailChange = event => email = event.target.value;
+    const handlePasswordChange = event => password = event.target.value;
 
     const handleSubmit = event => {
         event.preventDefault();
-
         const userData = {
             email: email,
             password: password
         };
         dispatch(loginUser(userData))
-        .then(() => {
-
-            console.log('worked');
-            
-        })
-        .catch(() => {
-            console.log('Broke')
-        })
     };
 
     return(
