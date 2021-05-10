@@ -1,6 +1,12 @@
 .searchformthree{
     margin:0 auto;
     font-size:24px;
+    font-weight: bold;
     margin-top: 20px;
-    width: 360px;
+    width: 400px;
+    text-align: center;
+}
+
+.labelthree{
+    color:white;
 }
