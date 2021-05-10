@@ -17,7 +17,10 @@ function NutritionBegin(){
                 <div className="col-xl-12 nutritionheadline">
                 <NutritionStart/>
                 </div>
-                <div className="col-xl-9">
+                <div className="col-xl-1">
+
+                </div>
+                <div className="col-xl-8">
                     <IndexPageThree/>
                     <IndexPageOne/>
                 </div>

@@ -7,8 +7,8 @@ function SearchFormOne(props){
     console.log(props)
     return(
           <form className="search searchformone">
-            <div className="form-group">
-                <label htmlFor="language">USDA Search for Food Nutrients</label>
+            <div className="form-group searchname">
+                <label className="labelone" htmlFor="language">USDA Search for Food Nutrients</label>
                 <input
                   value={props.search}
                   onChange={props.handleInputChange}
