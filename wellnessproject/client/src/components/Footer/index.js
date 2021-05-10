@@ -3,7 +3,7 @@ import './footer.css';
 
 const Footer = () => {
     return (
-    <h3 className='footer'> &#169; Authors: Chris Curry, Mark Snow, Amber VanHieson, Nat Abood, Ryan Wilson</h3>
+    <h3 className='footer'> &#169; Authors: Chris Curry, Mark Snow, Amber VanGieson, Ryan Wilson</h3>
     )
 }
 
