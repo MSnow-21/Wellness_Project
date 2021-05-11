@@ -2,7 +2,7 @@ const mongoose =  require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const fitnessSchema = new Schema({
+const Statschema = new Schema({
     username: {type: String, required: true },
     date: {type: Date, required: true},
     workout: {type: String, required: true },
@@ -13,6 +13,6 @@ const fitnessSchema = new Schema({
     timestamps: true,
 });
 
-const Fitness = mongoose.model('Fitness', fitnessSchema);
+const Stat = mongoose.model('Stat', statSchema);
 
 module.exports = Fitness;
