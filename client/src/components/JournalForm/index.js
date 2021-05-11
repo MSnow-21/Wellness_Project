@@ -12,22 +12,16 @@ import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      maxWidth: '100%',
       textAlign: 'center',
-      marginBottom: theme.spacing(1)
-      
+      marginBottom: theme.spacing(1)  
     },
     form: {
       paddingTop: theme.spacing(20),
       paddingLeft: theme.spacing(40),
-      paddingRight: theme.spacing(40)
+      paddingRight: theme.spacing(40),
     },
     iconButton: {
       padding: 10,
-    },
-    divider: {
-      height: 28,
-      margin: 4,
     },
   }));
 
