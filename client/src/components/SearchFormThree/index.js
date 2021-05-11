@@ -5,7 +5,7 @@ function SearchFormThree(props){
     return(
       <form className="search searchformthree">
         <div className="form-group">
-            <label htmlFor="language">Nutritionix Database</label>
+            <label className="labelthree" htmlFor="language">Nutritionix Database</label>
               <input
               value={props.search}
               onChange={props.handleInputChangeThree}
