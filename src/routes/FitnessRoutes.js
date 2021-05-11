@@ -1,4 +1,5 @@
-const router = require('express').Router();
+//XYZZY
+/*const router = require('express').Router();
 const { userStats } = require('../../client/src/actions/authActions');
 const { default: Stat } = require('../../client/src/components/Stat');
 let Stats = require('../models/Fitness');
@@ -30,3 +31,4 @@ userStats.save()
 });
 
 module.exports = router;
+*/

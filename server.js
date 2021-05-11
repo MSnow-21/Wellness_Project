@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 //Requires our routes
 const UserRoutes = require('./src/routes/UserRoutes');
-const FitnessRoutes = require('./src/routes/FitnessRoutes');
+//XYZZY
+//const FitnessRoutes = require('./src/routes/FitnessRoutes');
 const cors = require('cors')
 
 const app = express();
@@ -37,7 +38,8 @@ require('./src/config/passport')(passport);
 //Routes
 //require('./src/routes/UserRoutes')(app);
 app.use('/api/users', UserRoutes);
-app.use('/api/fitness', FitnessRoutes)
+//XYZZY
+//app.use('/api/fitness', FitnessRoutes)
 const PORT = process.env.PORT || 3001;
 
 app.get("/", (req, res) => {
