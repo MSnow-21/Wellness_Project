@@ -7,7 +7,7 @@ import { registerUser } from "../../../actions/authActions";
 import classnames from "classnames";
 import './register.css';
 
-const Register = () => {
+const Register = ({ setBgImage }) => {
     let history = useHistory();
     const dispatch = useDispatch();
     const [name, setName] = useState('');
@@ -48,7 +48,9 @@ const Register = () => {
     <div>
         <div className='login-link'>
             <h3>Already have an account?</h3>
-            <Link className='login-link-bttn'to='/'>Login</Link>
+            <Link 
+            onClick={setBgImage('signup-bg')}
+            className='login-link-bttn'to='/'>Login</Link>
         </div>
         <div className='register-form col-md-3'>
                     <h2>Sign Up</h2>

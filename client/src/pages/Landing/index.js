@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from '../../components/Auth/Login';
 import Register from '../../components/Auth/Register';
 import './landing.css';
 
 const Landing = () => {
-    
+    const [ bgImage, setBgImage ] = useState('login-bg');
+
     return (
-        <div className='landing-page'>
+        <div className={bgImage}>
             <div className='intro row'>
                 <h1 className='col-md-3 app-title'>Well Rouded Fitness</h1>
                 <div className='col-md-5'></div>
@@ -19,10 +20,12 @@ const Landing = () => {
                 <Router>
                     <Switch>
                         <Route exact path={'/'}>
-                            <Login />
+                            <Login
+                            setBgImage={setBgImage} />
                         </Route>
                         <Route exact path ='/register'>
-                            <Register />
+                            <Register
+                            setBgImage={setBgImage} />
                         </Route>
                     </Switch>
                 </Router>
