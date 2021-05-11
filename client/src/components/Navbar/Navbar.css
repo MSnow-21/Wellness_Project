@@ -24,6 +24,7 @@ nav.active {
 
 .logo img {
     width:90px;
+    margin: 10px;
 }
 
 nav.active{
@@ -45,6 +46,10 @@ nav ul{
 	box-shadow: 5px 10px 30px rgba(198, 64, 64, 0.411);
 	transition: all ease 0.2s;
 }
+nav ul li {
+    list-style: none;
+}
+
 nav ul li a{
     font-family: 'Lato';
 	height:40px;
@@ -71,3 +76,30 @@ nav .menu-btn,
 .menu-icon{
 		display:none;
 	}
+
+.nav-tab {
+    background: none;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+    font-family: 'Lato';
+	height:40px;
+	line-height: 43px;
+	margin: 3px;
+	padding: 0px 22px;
+	display: flex;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	color:#ffffff;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-tab:hover {
+    background-color: teal;
+    color:#ffffff;
+	box-shadow: 5px 10px 30px rgba(73, 178, 189, 0.411);
+	transition: all ease 0.2s;
+}
