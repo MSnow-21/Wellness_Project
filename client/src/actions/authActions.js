@@ -12,7 +12,7 @@ import {
 export const registerUser = (userData) => async dispatch => {
   try {
     const res = axios
-      .post('http://localhost:3001/api/users/register', userData);
+      .post('http://localhost/api/users/register', userData);
     return;
   } catch (err) {
     console.log(err);
@@ -25,7 +25,7 @@ export const registerUser = (userData) => async dispatch => {
 
 // Login - get user token
 export const loginUser = userData => async dispatch => {
-  axios.post('http://localhost:3001/api/users/login', userData)
+  axios.post('http://localhost/api/users/login', userData)
     .then(res => {
       // Save to localStorage
       const { token } = res.data;
