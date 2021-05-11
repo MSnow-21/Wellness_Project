@@ -31,10 +31,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server.js\" \"npm run client\"",
+    "start": "node server.js",
     "start:prod": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "heroku-postbuild":  "npm install --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "client": "cd client && npm run start"
   },
   "proxy": "http://localhost:3001",

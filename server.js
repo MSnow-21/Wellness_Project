@@ -11,7 +11,7 @@ const cors = require('cors')
 
 const app = express();
 
-//app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname,"client", "build")));
 
 const corsOptions = {
     origin: '*'
@@ -39,6 +39,10 @@ require('./src/config/passport')(passport);
 app.use('/api/users', UserRoutes);
 app.use('/api/fitness', FitnessRoutes)
 const PORT = process.env.PORT || 3001;
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "client","build", "index.html"));
+  });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}.`));
 
