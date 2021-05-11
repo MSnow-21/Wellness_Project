@@ -3,15 +3,15 @@ import axios from "axios";
 
 //USDA SEARCH QUERY REQUIREMENTS
 
-const USDA_BASEURL = `${process.env.REACT_APP_USDA_BASE_URL}`;
+const USDA_BASEURL = process.env.REACT_APP_USDA_BASE_URL;
 const API_ASK = "?api_key=";
-const USDA_API_KEY = `${process.env.REACT_APP_USDA_API_KEY}`;
+const USDA_API_KEY = process.env.REACT_APP_USDA_API_KEY;
 const query = "&query=";
 const pages = "&pageSize=20";
 
 
 //Rapid API Query REQUIREMENTS
-const RAPID_API_KEY = `${process.env.REACT_APP_RAPID_API_KEY}`;
+const RAPID_API_KEY = process.env.REACT_APP_RAPID_API_KEY;
 
 export default{
     getData: (search) => 
@@ -44,3 +44,4 @@ export default{
 
     
 };
+
