@@ -4,10 +4,15 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.0",
     "concurrently": "^6.0.2",
     "cors": "^2.8.5",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
@@ -15,7 +20,11 @@
     "mongoose": "^5.12.5",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
+    "react-spring": "^9.1.2",
+    "reactstrap": "^8.9.0",
+    "sass": "^1.32.12",
     "validator": "^13.6.0"
   },
   "devDependencies": {
