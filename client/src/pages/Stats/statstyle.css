@@ -1,0 +1,74 @@
+.stat{
+    background-image: url('../../images/random.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;    
+    height: 100%;
+    padding-bottom: 25px;
+    background-attachment: fixed;
+}
+.col-md-6{
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(248, 248, 245);
+    text-shadow: 2px 2px #0a0a0a;
+    position:inherit;
+    display: table-caption ;    
+    margin-left:auto; 
+    margin-right:auto;
+    font-size: small;
+    padding-top: 2px;
+}
+.col-md-7{
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(241, 241, 238);
+    text-shadow: 2px 2px #161515;
+    position:inherit;
+    display: table-row-group ;    
+    margin-left:auto; 
+    margin-right:auto;
+    font-size: small;
+    padding-top: 2px;
+}
+.row1{
+    text-align: center;
+    vertical-align: middle;
+    position:flex;
+    width: auto;    
+    height: auto; 
+    display: table ;    
+    margin-left:auto; 
+    margin-right:auto;
+    font-size: small;
+}
+.chart{
+    color: ivory;
+}
+.stat{
+    color: ivory;
+}
+.savebtn{
+    color: rgb(15, 15, 14);
+}
+.stat-intro {
+    color: rgb(238, 245, 245);
+    text-align: center;
+    padding-top: 1px;
+    text-align: center;
+}
+
+.stat-intro-statement {
+    margin-left: 12%;
+    text-shadow: 2px 2px #101111;
+}
+.stat-title {
+    font-size: 100px;
+    text-shadow: 4px 4px #111111;
+}
+
+.stat-headers {
+    color: #dde6e4;
+    font-size: 32px;
+}

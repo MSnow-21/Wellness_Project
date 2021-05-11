@@ -1,22 +1,22 @@
 const router = require('express').Router();
-let Fitness = require('../models/Fitness');
+const { userStats } = require('../../client/src/actions/authActions');
+const { default: Stat } = require('../../client/src/components/Stat');
+let Stats = require('../models/Fitness');
 
 router.get('/', (req, res) => {
-    Fitness.find()
-    .then(user => res.json(Fitness))
+    Stats.find()
+    .then(user => res.json(Stats))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.post('/add', (req, res) => {
-    const username = req.body.username;
     const date = Date.parse (req.body.date);
     const workout = req.body.workout;
     const duration = Number(req.body.duration);
     const social = Number(req.body.social);
     const calories = Number(req.body.calories);
 
-    const newFitness = new Fitness ({
-        username,
+    const userStats = new Stats ({
         date,
         workout,
         duration,
@@ -24,8 +24,8 @@ router.post('/add', (req, res) => {
         calories,
     }); 
 
-newFitness.save()
-.then(()=> res.json('Fitness added!'))
+userStats.save()
+.then(()=> res.json('Stats added!'))
 .catch(err => res.status(400).json('Error: ' + err));
 });
 

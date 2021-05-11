@@ -6,7 +6,7 @@ import { loginUser } from "../../../actions/authActions";
 import classnames from "classnames";
 import './login.css';
 
-const Login = () => {
+const Login = ({ setBgImage }) => {
     
     const dispatch = useDispatch();
     let email;
@@ -30,6 +30,7 @@ const Login = () => {
             <div className='signup-link'>
                 <h3>Dont have an account?</h3>
                 <Link
+                onClick={setBgImage('login-bg')}
                 className='signup-link-bttn' 
                 to='/register'>
                     Sign up

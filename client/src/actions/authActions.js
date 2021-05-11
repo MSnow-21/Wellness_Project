@@ -23,6 +23,20 @@ export const registerUser = (userData) => async dispatch => {
   }
 };
 
+export const userStats = (fitnessData) => async dispatch => {
+  try {
+    const res = axios
+      .post('http://localhost:3001/api/users/fitness', fitnessData);
+    return;
+  } catch (err) {
+    console.log(err);
+    return dispatch({
+      type: GET_ERRORS,
+      payload: err.response.data
+    });
+  }
+};
+
 // Login - get user token
 export const loginUser = userData => async dispatch => {
   axios.post('/api/users/login', userData)

@@ -17,7 +17,8 @@ const useStyles = makeStyles({
         backgroundImage: `url(${bgImage})`,
         minHeight: 768,
         minWidth: 640,
-        paddingBottom: '100px'
+        paddingBottom: '100px',
+        textAlign: 'center'
     }
   });
 
