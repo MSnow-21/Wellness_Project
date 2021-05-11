@@ -10,30 +10,30 @@ import Chart from "react-google-charts";
 
 const Stats = () => {
     return (
-        <body className='statbody'>
         <div className='stats-page'>
             <div className='stat'>
             <Intro />
-            <div className='row'>
+            <div className='row1'>
                 <div className='col-md-6'>
                     <AddDate />
                 </div>
-                <div className='row'>
+                <div className='row1'>
                 <div className='col-md-6'>
                         <AddWorkout />
                     </div>
-                    <div className='row'>
+                    <div className='row1'>
                         <div className='col-md-6'>
                         <WorkoutDuration />
                         </div>
-                        <div className='row'>
+                        <div className='row1'>
                         <div className='col-md-6'>
                         <SocialActivity />
                         </div>
-                        <div className='row'>
+                        <div className='row1'>
                         <div className='col-md-6'>
                         <Calories />
                         </div>
+                        <button class="savebtn" id="savebtn" type="submit">Save</button>
                     <div className='chart' style={{ display: 'flex', maxWidth: 9000 }}>
                          <Chart
                             width={850}
@@ -69,7 +69,6 @@ const Stats = () => {
          </div>
      </div>
      </div>
-     </body>
     )
 };
 

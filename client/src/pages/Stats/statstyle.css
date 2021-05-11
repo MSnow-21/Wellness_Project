@@ -1,8 +1,11 @@
-.statbody{
+.stat{
     background-image: url('../../images/photo-1459664018906-085c36f472af.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: auto;    
+    height: auto;
+    padding-bottom: 25px;
 }
 .col-md-6{
     text-align: center;
@@ -14,13 +17,12 @@
     margin-left:auto; 
     margin-right:auto;
 }
-.row{
+.row1{
     text-align: center;
     vertical-align: middle;
-    color: rgb(241, 241, 238);
-    position:inherit;
-    width: 200px;    
-    height: 200px; 
+    position:flex;
+    width: auto;    
+    height: auto; 
     display: table ;    
     margin-left:auto; 
     margin-right:auto;
@@ -30,4 +32,27 @@
 }
 .stat{
     color: ivory;
+}
+.savebtn{
+    color: rgb(15, 15, 14);
+}
+.stat-intro {
+    color: white;
+    text-align: center;
+    padding-top: 1px;
+    text-align: center;
+}
+
+.stat-intro-statement {
+    margin-left: 12%;
+    text-shadow: 2px 2px #070e0c;
+}
+.stat-title {
+    font-size: 100px;
+    text-shadow: 4px 4px #070e0c;
+}
+
+.stat-headers {
+    color: #3AA08C;
+    font-size: 32px;
 }

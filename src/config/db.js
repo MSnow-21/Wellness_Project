@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const connectDB = async () => {
     try {
         //database Name
-        const databaseName='well_rounded';
+        const databaseName='wellness';
         const con = await mongoose.connect(`mongodb://127.0.0.1:27017/${databaseName}`, { 
         useNewUrlParser: true,
         useUnifiedTopology: true,
