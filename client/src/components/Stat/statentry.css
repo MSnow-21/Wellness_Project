@@ -1,0 +1,23 @@
+
+.stat-form {
+    margin: 50px auto 50px auto;
+    border-radius: 100%;
+    padding: 50px;
+    height: 350px;
+    width: 350px;
+    background-image: url(../../images/random.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 90%;
+    filter: drop-shadow(0px 0px 40px rgb(255, 247, 190));
+}
+
+.stat-bttn {
+    margin: 3px;
+    padding: 3px;
+    opacity: 90%;
+    background-color: white;
+    border-radius: 50%;
+    color:black;
+}

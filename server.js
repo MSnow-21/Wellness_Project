@@ -24,7 +24,7 @@ app.use(
 app.use(bodyParser.json());
 
 //DB Config ???
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wellness", { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wellness", { useNewUrlParser: true, useUnifiedTopology: true })
 .then(console.log('Success'));
 //Middleware
 app.use(passport.initialize());

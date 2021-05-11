@@ -5,6 +5,7 @@ import { logoutUser } from "../../actions/authActions";
 import logo from "../../images/logo.png";
 import { connect, useDispatch } from "react-redux";
 
+
 const Navbar = () => {
     const dispatch = useDispatch();
     let history = useHistory();
@@ -47,6 +48,7 @@ const Navbar = () => {
         <li><Link to = "/"> Home </Link></li>
         <li><Link to = "/nutrition"> Nutrition </Link></li>
         <li><Link to = "/fitness"> Fitness </Link></li>
+        <li><Link to = "/Stats"> Stats </Link></li>
         <li><Link to = "/journal"> Journal </Link></li>
         <li><Link to = "/contact"> Contact </Link></li>
         <button onClick={onLogout} className='nav-tab'>Log Out</button>

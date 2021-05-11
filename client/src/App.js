@@ -6,6 +6,7 @@ import Nutrition from "./pages/Nutrition";
 import Journal from "./pages/Journal";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Stats from './pages/Stats'
 import Fitness from "./pages/Fitness";
 import Landing from "./pages/Landing";
 import jwt_decode from "jwt-decode";
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route exact path = "/fitness"> 
           <Fitness />
+      </Route> 
+      <Route exact path = "/stats"> 
+          <Stats />
       </Route> 
 
       <Route exact path = "/journal"> 
