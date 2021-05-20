@@ -7,30 +7,7 @@ import { Box } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  root: {
-    width: 345,
-    height:300,
-    margin: 12,
-    opacity:0.8,
-    backgroundColor: 'teal'
-  },
-  date: {
-    marginLeft: 20,
-    fontSize: 26,
-    color: 'white'
-  },
-  button: {
-    color: 'white',
-    fontSize: 38
-  },
-  note: {
-    color: 'white',
-    fontSize: 18,
-    padding: 15
-  }
-
-});
+import useStyles from './styles';
 
 /*
 */

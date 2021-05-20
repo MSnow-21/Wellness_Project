@@ -2,33 +2,28 @@ import React, { useContext } from 'react';
 import { NoteContext } from '../../contexts/NoteContext';
 import JournalNotes from '../JournalNotes';
 import MoodBadIcon from '@material-ui/icons/MoodBad';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-    root: {
-        textAlign: 'center',
-        color: 'white',
-        paddingTop: '50px'
-    }
-})
+import { Container, Grid } from '@material-ui/core';
+import useStyles from './styles';
 
 const JournalEntry = () => {
     const classes = useStyles();
     const { notes } = useContext(NoteContext)
     console.log({ notes })
     return notes.length ? (
-        <div className='notes'>
-            <ul className='row'>
+        <Container className={classes.notes}>
+            <Grid container spacing={2} justify='center'>
                 { notes.map(note => {
                     return (
-                        <JournalNotes note={note} key={note.id} />
+                        <Grid item key={note} >
+                            <JournalNotes note={note} key={note.id} />
+                        </Grid>
                     )
                 })}
-            </ul>
-        </div>
+            </Grid>
+        </Container>
     ) : (
-    <div className={classes.root}>
-        <h1 className='no-notes'>You have no current notes.</h1>
+    <div className={classes.noNotes}>
+        <h1>You have no current notes.</h1>
         <MoodBadIcon style={{ 
             fontSize: 300,
          }} />
