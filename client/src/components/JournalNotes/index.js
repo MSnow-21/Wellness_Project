@@ -5,7 +5,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
-import Typography from '@material-ui/core/Typography';
+import { Typography } from '@material-ui/core';
 
 import useStyles from './styles';
 

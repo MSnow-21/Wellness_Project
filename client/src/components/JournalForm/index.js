@@ -16,6 +16,7 @@ const JournalForm = () => {
     const { dispatch } = useContext(NoteContext);
     const [date, setDate] = useState('');
     const [note, setNote] = useState('');
+    
     const handleSubmit = (event) => {
       event.preventDefault();
       dispatch({type: 'ADD_NOTE', note: {

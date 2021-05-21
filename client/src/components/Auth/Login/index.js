@@ -1,13 +1,50 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect, useDispatch } from "react-redux";
 import { loginUser } from "../../../actions/authActions";
 import classnames from "classnames";
 import './login.css';
 
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+
+const useStyles = makeStyles((theme) => ({
+    form: {
+        width: '100%',
+        marginTop: theme.spacing(1),
+      },
+      submit: {
+        margin: theme.spacing(3, 0, 2),
+        backgroundColor: 'teal',
+      },
+      avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: 'teal',
+      },
+      form: {
+        width: '100%', // Fix IE 11 issue.
+        marginTop: theme.spacing(1),
+      },
+      paper: {
+        margin: theme.spacing(8, 4),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      },
+}))
+
+
 const Login = ({ setBgImage }) => {
-    
+    const classes = useStyles();
     const dispatch = useDispatch();
     let email;
     let password;
@@ -26,61 +63,65 @@ const Login = ({ setBgImage }) => {
     };
 
     return(
-        <div>
-            <div className='signup-link'>
-                <h3>Dont have an account?</h3>
-                <Link
-                onClick={setBgImage('login-bg')}
-                className='signup-link-bttn' 
-                to='/register'>
-                    Sign up
+        <div className={classes.paper}>
+            <Avatar className={classes.avatar}>
+                <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+                Log in
+            </Typography>
+            <form className={classes.form} noValidate>
+            <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            autoFocus
+            />
+            <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            autoComplete="current-password"
+            />
+            <FormControlLabel
+            control={<Checkbox value="remember" color="primary" />}
+            label="Remember me"
+            />
+            <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            >
+            Log In
+            </Button>
+            <Grid container>
+            <Grid item xs>
+                <Link href="#" variant="body2">
+                Forgot password?
                 </Link>
-            </div>
-            <div className='col-md-3 login-form'>
-                <form>
-                    <h2>Login</h2>
-                    <div>
-                        <input 
-                        id='email'
-                        type='email'
-                        placeholder='Email'
-                        onChange={handleEmailChange}
-                        className={classnames("", {
-                            invalid: errors.email || errors.emailnotfound
-                        })}
-                        />
-                        <span>
-                            {errors.email}
-                            {errors.emailnotfound}
-                        </span>
-                    </div>
-                    <div>
-                        <input
-                        id='password'
-                        type='password'
-                        placeholder='Password'
-                        onChange={handlePasswordChange}
-                        className={classnames("", {
-                            invalid: errors.password || errors.passwordincorrect
-                        })}
-                        />
-                        <span>
-                            {errors.email}
-                            {errors.emailnotfound}
-                        </span>
-                    </div>
-                    <div>
-                        <button
-                        type='submit'
-                        className='login-bttn'
-                        onClick={handleSubmit}
-                        >
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>        
+            </Grid>
+            <Grid item>
+                <Link href="/register" variant="body2">
+                {"Don't have an account? Sign Up"}
+                </Link>
+            </Grid>
+            </Grid>
+            <Box mt={5}>
+            </Box>
+        </form>
+    </div>
     )
 }
 
