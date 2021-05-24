@@ -1,5 +1,23 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import "./style.css";
+
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 345,
+    },
+    media: {
+        height: 140,
+    },
+});
+
 
 function SearchResultsTwo(props){
     
@@ -14,25 +32,31 @@ function SearchResultsTwo(props){
 
     }
 
-    return(  
-        <div className="carddiv" style={{ width:'20rem'}}>
-        {props.items.map(({food},i) => (
-            <div key={i} className="card picturecard alert alert-secondary">
-                <img className="img-card-top" src={food.image} alt="food image"></img>
-                <div className="card-body">
-                    <h5 className="card-title foodtext btn btn-success btn-lg">Selected Food: {food.label}</h5>
-                </div>
-                
-                {getNutrients(food.nutrients).map((nutrient,j) => (
-                    <ul key={j} className="list-group-flush">
-                        <li className="listtext btn btn-light btn-lg">{nutrient[0]+": "+nutrient[1].toString().slice(0,5)}</li>
-                    </ul>
-                ))
+    const classes = useStyles();
 
-              }
-            </div>
-        ))}  
-    </div>
+    return(
+    <Card className={classes.root}>
+        {props.items.map(({food},i) => (
+        <CardActionArea key={i}>
+            <CardMedia
+            className={classes.media}
+            image={food.image}
+            title="Contemplative Reptile"
+            />    
+            <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+              {food.label}
+          </Typography>
+          {getNutrients(food.nutrients).map((nutrient,j) =>
+          <Typography variant="body2" color="textSecondary" component="p" key={j}>
+              {nutrient[0]+": "+nutrient[1].toString().slice(0,5)}    
+          </Typography>
+          )}
+        </CardContent>
+        </CardActionArea>
+        ))}
+
+    </Card>
         
     );
 }

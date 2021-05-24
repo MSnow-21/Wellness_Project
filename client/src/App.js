@@ -65,7 +65,7 @@ function App() {
   ) : (
   <div>
     <Router>
-      <Route exact path = '/'>
+      <Route exact path = {['/', '/login', '/register']}>
         <Landing />
       </Route>
     </Router>    

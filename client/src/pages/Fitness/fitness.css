@@ -40,12 +40,13 @@
 
 .fitness-title {
     font-size: 100px;
-    text-shadow: 4px 4px #3AA08C;
+    text-shadow: 4px 4px #2909AE;
 }
 
 .fitness-headers {
-    color: #3AA08C;
+    color: white;
     font-size: 32px;
+    text-shadow: 3px 3px blue;
 }
 
 .workout-options {

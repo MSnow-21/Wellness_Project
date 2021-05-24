@@ -1,66 +1,67 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css"
-import { Link, useHistory } from "react-router-dom";
-import { logoutUser } from "../../actions/authActions";
-import logo from "../../images/logo.png";
-import { connect, useDispatch } from "react-redux";
+
+function Navbar(){
+  const [click, setClick] = useState(false);
 
 
-const Navbar = () => {
-    const dispatch = useDispatch();
-    let history = useHistory();
-    const [nav, setnav] = useState (false);
+  const handleClick = () => setClick(!click);
 
-    const changeBackground = () => {
-        if (window.scrollY >= 50) {
-            setnav (true);
+  const closeMobileMenu = () => setClick(false);
 
-        }else {
-            setnav (false);
-        }
-        
-    }
-
-    const onLogout = event => {
-        console.log("in onlogout");
-        //localStorage.removeItem('jwtToken');
-        dispatch(logoutUser());
-
-        history.push('/');
-        window.location.reload();
-    }
-
-    window.addEventListener ("scroll", changeBackground);
-
-    return (
-        <nav className = {nav ? "nav active" : "nav"}>
-        
-        <Link to = "#" className = "logo">
-            <img src = {logo} alt = ''/>
-        </Link>
-        
-        <input className = "menu-btn" type = "checkbox" id = "menu-btn"/>
-        <label className = "menu-icon" htmlFor = "menu-btn">
-            <span className = "nav-icon"></span>
-        </label>
-
-    <ul className = "menu" >
-        <li><Link to = "/"> Home </Link></li>
-        <li><Link to = "/nutrition"> Nutrition </Link></li>
-        <li><Link to = "/fitness"> Fitness </Link></li>
-        <li><Link to = "/Stats"> Stats </Link></li>
-        <li><Link to = "/journal"> Journal </Link></li>
-        <li><Link to = "/contact"> Contact </Link></li>
-        <button onClick={onLogout} className='nav-tab'>Log Out</button>
-    </ul>
-
+  return(
+    <>
+    <nav className='navbar'>
+      <Link to='/' className='navbar-logo'>
+        WellRounded Fitness
+      </Link>
+      <div className='menu-icon' onClick={handleClick}>
+        <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
+      </div>
+      <ul className={click ? 'nav-menu active': 'nav-menu'}>
+        <li className='nav-item'>
+          <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            Home
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/nutrition' className='nav-links' onClick={closeMobileMenu}>
+            Nutrition
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/fitness' className='nav-links' onClick={closeMobileMenu}>
+            Fitness
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/stats' className='nav-links' onClick={closeMobileMenu}>
+            Stats
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/journal' className='nav-links' onClick={closeMobileMenu}>
+            Journal
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
+            Contact
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
+            Log Out
+          </Link>
+        </li>
+      </ul>
     </nav>
-
-    )
+    </>
+  )
 }
 
+
 export default Navbar;
-
-
 
     

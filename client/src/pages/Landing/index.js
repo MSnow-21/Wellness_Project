@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { Route, Switch } from "react-router";
+import { Route, Switch, Link, Router } from "react-router";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,37 +21,23 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     },
-    paper: {
-      margin: theme.spacing(8, 4),
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
-    avatar: {
-      margin: theme.spacing(1),
-      backgroundColor: 'teal',
-    },
-    form: {
-      width: '100%', // Fix IE 11 issue.
-      marginTop: theme.spacing(1),
-    },
   }));
 
 const Landing = () => {
     const classes = useStyles();
     return (
-        <Grid container component="main" className={classes.root}>
-        <CssBaseline />
+      <Grid container component="main" className={classes.root}>
+      <CssBaseline />
         <Grid item xs={false} sm={4} md={7} className={classes.image} />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-            <Switch>
-            <Route exact path="/">
-                <Login />
+          <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <Switch>
+            <Route exact path ={['/', 'login']}>
+              <Login />
             </Route>
-            <Route path="/">
-                <Register />
+            <Route exact path = '/register'>
+              <Register />
             </Route>
-            </Switch>
+          </Switch>
         </Grid>
       </Grid>
     )

@@ -14,13 +14,13 @@
     padding: 5px;
     text-align: center;
 }
-
+/* 
 .areaone{
     padding: 68px;
-    background-color: black;
+    background-color: red;
     opacity: .2;
  
-}
+} */
 
 @media only screen and (max-width: 740px) {
     .nutritionheadline {

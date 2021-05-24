@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import JournalEntry from '../../components/JournalEntries';
 import JournalForm from '../../components/JournalForm';
 import NoteContextProvider from '../../contexts/NoteContext';
-import bgImage from '../../images/journal-bg.jpg'; 
 import { Box } from '@material-ui/core';
-
+import './styles.css';
 import useStyles from './styles';
 
 
@@ -14,15 +13,17 @@ const Journal = () => {
     const classes = useStyles();
     
     return (
-        <Box className={classes.container}>
-            <NoteContextProvider>
-                <JournalForm 
-                />
-                <JournalEntry
-                entries = {entries} 
-                />
-            </NoteContextProvider>
-        </Box>
+        <div className='journal-page'>
+            <Box className={classes.container}>
+                <NoteContextProvider>
+                    <JournalForm 
+                    />
+                    <JournalEntry
+                        entries = {entries} 
+                    />
+                </NoteContextProvider>
+            </Box>
+        </div>
     );
     
     }
