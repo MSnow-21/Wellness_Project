@@ -1,6 +1,7 @@
 import { useEffect, useState} from "react";
 import SearchFormTwo from "../SearchFormTwo";
 import SearchResultsTwo from "../SearchResultsTwo";
+import Wrapper from "../Wrapper";
 import API from "../../utils/API";
 
 const IndexPageTwo = () => {
@@ -32,9 +33,11 @@ const IndexPageTwo = () => {
             handleInputChangeTwo={handleInputChangeTwo}
             results={search}
             />
+            <Wrapper>
             <SearchResultsTwo
             items={items}
             />
+            </Wrapper>
         </div>
     )
 
