@@ -1,7 +1,7 @@
 body{
     width:100%;
     height:100%;
-    position:sticky;
+    position:absolute;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../../images/eiliv-sonas-aceron--D6xO2LUVdk-unsplash.jpg');
