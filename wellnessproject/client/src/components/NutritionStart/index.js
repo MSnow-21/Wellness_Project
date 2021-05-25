@@ -4,12 +4,12 @@ import { useSpring, animated } from "react-spring";
 function NutritionStart() {
     const styles = useSpring({
       from: { color: 'white', fontSize: 0, marginTop: -500},
-      to: { color: '#17a2b8', fontSize: 36, marginTop:0 },
+      to: { color: '#3214DA', fontSize: 36, marginTop:0 },
     })
 
     const morestyle = useSpring({
-      from: { color: 'blue'},
-      to: { color: 'black'},
+      from: { color: 'white', fontSize: 0},
+      to: { color: 'black', fontSize: 24},
     })
     // ...
     return (

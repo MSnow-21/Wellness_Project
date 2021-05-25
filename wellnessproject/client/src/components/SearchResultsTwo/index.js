@@ -37,7 +37,8 @@ function SearchResultsTwo(props){
     return(
     <Card className={classes.root}>
         {props.items.map(({food},i) => (
-        <CardActionArea key={i}>
+        <div key={i}>
+        <CardActionArea>
             <CardMedia
             className={classes.media}
             image={food.image}
@@ -54,7 +55,9 @@ function SearchResultsTwo(props){
           )}
         </CardContent>
         </CardActionArea>
+        </div>
         ))}
+    
 
     </Card>
         
