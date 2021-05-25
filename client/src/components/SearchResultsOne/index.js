@@ -11,7 +11,7 @@ function SearchResultsOne(props){
 
     return(
         <div>
-            <Table responsive="sm">
+            <Table responsive>
                 <TableHeadingOne/>
             
                 {Array.isArray(props.items) && props.items.map(({ brandOwner,dataType, description, fdcId ,foodNutrients}, i) => (

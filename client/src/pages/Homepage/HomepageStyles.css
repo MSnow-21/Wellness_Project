@@ -5,8 +5,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../../images/sven-mieke.jpg');
-    position: relative;
     z-index: 0;
+    background-attachment: fixed;
 }
 
 #main::before{
@@ -14,7 +14,7 @@
     content: "";
     background: -moz-radial-gradient(center, ellipse cover, rgb(20, 74, 74) 0%, rgba(0, 0, 0, 0.6) 100%);
     background: -webkit-radial-gradient(center, ellipse cover, rgb(20, 74, 74) 0%, rgba(0, 0, 0, 0.6) 100%);
-    background: radial-gradient(ellipse at center, rgb(20, 74, 74) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: radial-gradient(ellipse at center, #180561 0%, rgba(0, 0, 0, 0.6) 100%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -37,12 +37,12 @@ transform: translate(-50%,-55%);
 }
 
 .header-heading span{
-color: teal;
+color: #2909AE;
 }
 
 .header-heading .details{
 font-size: 23px;
-color: #C5C5C5;
+color: white;
 }
 
 .header-heading h2{
@@ -50,7 +50,7 @@ font-family:'Lato';
 font-size: 2.7rem;
 margin:0px;
 letter-spacing: 2px;
-color:#ffffff;
+color:white;
 }
 
 .header-heading h1{
@@ -58,7 +58,7 @@ font-family:'Lato';
 font-size: 5rem;
 margin:0px;
 letter-spacing: 2px;
-color:#ffffff;
+color: white;
 }
 
 .header-btns{
@@ -75,8 +75,8 @@ justify-content: center;
 margin-left: 40px;
 align-items: center;
 font-size: 1.4rem;
-background-color: teal;
-box-shadow: 5px 10px 30px rgb(3, 81, 82);
+background-color: ;
+box-shadow: 5px 10px 30px #2909AE;
 border-radius: 5px;
 color:#ffffff;
 }
@@ -85,5 +85,5 @@ color:#ffffff;
 background-color: transparent;
 transition: all ease 0.5s;
 color: #FFFFFF;
-border: 2px solid teal;
+border: 2px solid #2909AE;
 }

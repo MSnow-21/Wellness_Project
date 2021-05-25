@@ -8,7 +8,7 @@ function SearchResultsThree(props){
 
     return(
         <div>
-            <Table>
+            <Table responsive>
                 <thead className="thead-dark tableheadingtwo">
                     <tr>
                         <th scope="col">#</th>
