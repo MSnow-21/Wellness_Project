@@ -1,11 +1,9 @@
 import React from 'react';
 import { Container, Typography } from '@material-ui/core';
-import useStyles from './styles';
-
+import './styles.css';
 const Footer = () => {
-    const classes = useStyles();
     return (
-        <footer className={classes.footer}>
+        <footer className='footer'>
             <Typography variant='h4'>
                 Well Rounded Wellness
             </Typography>

@@ -5,8 +5,8 @@ const useStyles = makeStyles((theme) => ({
         width: 300,
         height:300,
         margin: 12,
-        opacity:0.8,
-        backgroundColor: 'teal'
+        opacity:0.9,
+        backgroundColor: '#2909AE'
       },
       date: {
         margin: 'auto',

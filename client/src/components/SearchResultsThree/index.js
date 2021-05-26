@@ -1,4 +1,5 @@
 import React from "react";
+import { Table } from "react-bootstrap";
 import "./style.css";
 
 function SearchResultsThree(props){
@@ -7,7 +8,7 @@ function SearchResultsThree(props){
 
     return(
         <div>
-            <table className="table">
+            <Table responsive>
                 <thead className="thead-dark tableheadingtwo">
                     <tr>
                         <th scope="col">#</th>
@@ -33,7 +34,7 @@ function SearchResultsThree(props){
                         ))
                         }
                 </tbody>
-            </table>
+            </Table>
 
         </div>
     );

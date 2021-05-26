@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TableHeadingOne from "../TableHeadingOne";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Table } from 'react-bootstrap';
 import "./style.css"
 
 function SearchResultsOne(props){  
@@ -9,7 +11,7 @@ function SearchResultsOne(props){
 
     return(
         <div>
-            <table className="table">
+            <Table responsive>
                 <TableHeadingOne/>
             
                 {Array.isArray(props.items) && props.items.map(({ brandOwner,dataType, description, fdcId ,foodNutrients}, i) => (
@@ -26,7 +28,7 @@ function SearchResultsOne(props){
                 </tbody>
                 ))
             }
-            </table>
+            </Table>
         </div>
         
     );

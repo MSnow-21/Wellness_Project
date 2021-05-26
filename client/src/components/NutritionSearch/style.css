@@ -1,35 +1,4 @@
-.main{
-    width:100%;
-    height:768px;
-    position: sticky;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../../images/lawrence-kayku-ZVKr8wADhpc-unsplash.jpg');
-    position: relative;
-    z-index: 0;
-}
-
-.nutritionheadline{
+ .nutritionheadline{
     padding: 5px;
     text-align: center;
-}
-
-.areaone{
-    padding: 68px;
-    background-color: black;
-    opacity: .2;
- 
-}
-
-@media only screen and (max-width: 740px) {
-    .nutritionheadline {
-      padding: 20px;
-    }
-}
-
-@media only screen and (max-width: 740px) {
-    .areaone {
-      padding: 90px;
-    }
 }

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import { connect, useDispatch } from "react-redux";
 import { loginUser } from "../../../actions/authActions";
-import classnames from "classnames";
-import './login.css';
 
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -20,19 +18,17 @@ import Avatar from '@material-ui/core/Avatar';
 const useStyles = makeStyles((theme) => ({
     form: {
         width: '100%',
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(3),
       },
       submit: {
         margin: theme.spacing(3, 0, 2),
-        backgroundColor: 'teal',
+        backgroundColor: '#2909AE',
       },
       avatar: {
+        marginTop: theme.spacing(10),
         margin: theme.spacing(1),
-        backgroundColor: 'teal',
-      },
-      form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
+        backgroundColor: '#2909AE',
+        
       },
       paper: {
         margin: theme.spacing(8, 4),
@@ -72,6 +68,7 @@ const Login = ({ setBgImage }) => {
             </Typography>
             <form className={classes.form} noValidate>
             <TextField
+            onChange={handleEmailChange}
             variant="outlined"
             margin="normal"
             required
@@ -83,6 +80,7 @@ const Login = ({ setBgImage }) => {
             autoFocus
             />
             <TextField
+            onChange={handlePasswordChange}
             variant="outlined"
             margin="normal"
             required
@@ -103,15 +101,11 @@ const Login = ({ setBgImage }) => {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleSubmit}
             >
             Log In
             </Button>
             <Grid container>
-            <Grid item xs>
-                <Link href="#" variant="body2">
-                Forgot password?
-                </Link>
-            </Grid>
             <Grid item>
                 <Link href="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
