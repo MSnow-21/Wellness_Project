@@ -108,7 +108,7 @@ const Login = ({ setBgImage }) => {
             <Grid container>
             <Grid item>
                 <Link to = "/register">
-                  {'Dont have an account? Sign Up!'}
+                  Dont have an account? Sign Up!
                 </Link>
             </Grid>
             </Grid>
