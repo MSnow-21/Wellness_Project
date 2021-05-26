@@ -172,30 +172,26 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-        <ListItem className={classes.listItem}>
-          <HomeIcon fontSize='large' />
-          <Link to='/' className='nav-link'>Home</Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <EcoIcon fontSize='large' />
-          <Link to='/nutrition' className='nav-link'>Nutrition</Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <FitnessCenterIcon fontSize='large' />
-          <Link to='/fitness' className='nav-link'>Fitness</Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <EqualizerIcon fontSize='large' />
-          <Link to='/stats' className='nav-link'>Statistics</Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <MenuBookIcon fontSize='large' />
-          <Link to='/journal' className='nav-link'>Journal</Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <PermContactCalendarIcon fontSize='large' />
-          <Link to='/contact' className='nav-link'>Contant</Link>
-        </ListItem>
+          <ListItem className={classes.listItem}>
+            <HomeIcon fontSize='large' />
+            <Link to='/' className='nav-link'>Home</Link>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <EcoIcon fontSize='large' />
+            <Link to='/nutrition' className='nav-link'>Nutrition</Link>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <FitnessCenterIcon fontSize='large' />
+            <Link to='/fitness' className='nav-link'>Fitness</Link>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <EqualizerIcon fontSize='large' />
+            <Link to='/stats' className='nav-link'>Statistics</Link>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <MenuBookIcon fontSize='large' />
+            <Link to='/journal' className='nav-link'>Journal</Link>
+          </ListItem>
         </List>
 
         <Divider />
