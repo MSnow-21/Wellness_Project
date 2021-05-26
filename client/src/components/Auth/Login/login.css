@@ -1,0 +1,42 @@
+
+.login-form {
+    margin: 50px auto 50px auto;
+    border-radius: 100%;
+    padding: 75px;
+    background-image: url(../../../images/fire.png);
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .9;
+    filter: drop-shadow(0px 0px 40px rgb(255, 243, 190));
+}
+
+@media only screen and (max-width: 760px) {
+    .login-form {
+      max-width: 50%;
+    }
+  }
+
+.login-bttn {
+    margin: 3px;
+    padding: 3px;
+    opacity: .9;
+    background-color: white;
+    border-radius: 50%;
+    color:black;
+}
+
+.signup-link {
+    color: white;
+}
+
+.signup-link-bttn {
+    color: white;
+    font-size: 24px;
+}
+
+.signup-link-bttn:hover {
+    color: orangered;
+}
