@@ -3,7 +3,6 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 const FitnessImage = ({ fitnessImage }) => {
-  
   const createCarousel = fitnessImage.map((i) => 
   <Carousel.Item>
     <img
@@ -14,9 +13,12 @@ const FitnessImage = ({ fitnessImage }) => {
   </Carousel.Item>
   )
     return (
-<Carousel fade className='carousel'>
-    {createCarousel}
-</Carousel>
+      <div>
+      <p style={{paddingTop: 50}}>Press the left and right sides of images to navigate your workout.</p>
+    <Carousel fade className='carousel'>
+      {createCarousel}
+  </Carousel>
+      </div>
     )
 }
 

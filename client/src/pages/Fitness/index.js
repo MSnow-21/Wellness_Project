@@ -8,8 +8,7 @@ const Fitness = () => {
         <div className='fitness-page'>
             <Intro />
             <div className='row fitness-components'>
-                <div className='col-md-1'></div>
-                <div className='col-md-10'>
+                <div className='col-md-12'>
                     <FitnessWorkouts />
                 </div>               
             </div>

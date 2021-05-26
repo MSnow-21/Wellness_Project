@@ -9,8 +9,6 @@ import { Typography } from '@material-ui/core';
 
 import useStyles from './styles';
 
-/*
-*/
 const JournalNotes = ({ note }) => {
     const { dispatch } = useContext(NoteContext);
     const classes = useStyles();

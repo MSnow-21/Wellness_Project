@@ -14,6 +14,7 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from './store';
 import Footer from './components/Footer';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 if(localStorage.jwtToken) {
   const token = localStorage.jwtToken;

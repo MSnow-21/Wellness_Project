@@ -12,6 +12,8 @@
 
 .fitness-components {
     margin: 0px;
+    text-align: center;
+    padding: 10px;
 }
 
 .center {
@@ -26,7 +28,7 @@
 }
 
 .intro-statement {
-    margin-left: 12%;
+    text-align: center;
 }
 
 .daily-workouts {
@@ -39,7 +41,7 @@
 }
 
 .fitness-title {
-    font-size: 100px;
+    font-size: 70px;
     text-shadow: 4px 4px #2909AE;
 }
 
@@ -61,8 +63,9 @@
     list-style: none;
     font-size: large;
     line-height: 50px;
+    padding-top: 20px;
 }
 
 .carousel {
-    margin:50px 20px 0 20px;
+    margin:50px 0px 0 0px;
 }
